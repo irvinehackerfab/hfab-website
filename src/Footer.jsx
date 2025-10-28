@@ -17,7 +17,7 @@ function Footer() {
                     <a href={discordLink} target="_blank" rel="noopener noreferrer">
                         <FaDiscord className="socialButton" />
                     </a>
-                    <a href={`${gmailUrl}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`${gitHubLink}`} target="_blank" rel="noopener noreferrer">
                         <FaGithub className="socialButton" />
                     </a>
                 </div>

@@ -10,14 +10,14 @@
 .socialContainer{
     padding: 0px;
     margin: 0;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 .socialButton{
-    height: 2rem;
-    width: 2rem;
-    margin-right: 20px;
-    margin-left: 20px;
+    height: 3rem;
+    width: 3rem;
     color: #004aad;
 }
 .bodyText{

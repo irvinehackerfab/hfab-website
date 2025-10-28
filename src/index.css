@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+
+:root {
+  --primary-yellow: #fecc07; /* your soft yellow */
+  --primary-blue: #255799;   /* optional extra colors */
+}

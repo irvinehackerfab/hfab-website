@@ -1,0 +1,54 @@
+/* NavBar.css */
+#navbarLogo {
+  width: 100px; 
+  height: auto; 
+}
+/* Navigation Bar Styles */
+#navBarList {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0px;
+  align-self: flex-end;
+}
+/* Navigation Bar List Item Styles */
+.navbarListItem {
+  list-style-type: none;
+  padding: 10px;
+  margin-right: 20px;
+  font-size: large;
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.navbarListItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbarListItem:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Selected Navigation Bar List Item Styles */
+.navbarListItemSelected {
+  list-style-type: none;
+  padding: 10px;
+  margin-right: 20px;
+  font-size: large;
+  color: rgb(255, 255, 255);
+  background-color: var(--primary-blue);
+}
+
+.navbarListItemSelected a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbarListItemSelected:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
