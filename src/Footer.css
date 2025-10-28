@@ -1,0 +1,26 @@
+.Footer{
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.socialContainer{
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.socialButton{
+    height: 3rem;
+    width: 3rem;
+    color: #004aad;
+}
+.bodyText{
+    margin: 0;
+    font-size: 100%;
+}
