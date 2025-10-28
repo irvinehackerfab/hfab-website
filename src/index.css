@@ -17,3 +17,10 @@ header{
   --primary-yellow: #fecc07; /* your soft yellow */
   --primary-blue: #255799;   /* optional extra colors */
 }
+
+main {
+  padding: 0 !important;
+}
+* {
+  font-family: "Lato", sans-serif;
+}

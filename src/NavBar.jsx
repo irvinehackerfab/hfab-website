@@ -17,10 +17,9 @@ function NavBar() {
           {/* If the current path matches the link path, apply the 'selected' style (change to blue)*/}
           <li className={location.pathname === "/" ? "navbarListItemSelected" : "navbarListItem"}><Link to={"/"}>Home</Link></li>
           <li className={location.pathname === "/About" ? "navbarListItemSelected" : "navbarListItem"}><Link to={"/About"}>About</Link></li>
-          <li className={location.pathname === "/Subteam" ? "navbarListItemSelected" : "navbarListItem"}><Link  to = {"/Subteam"}>Subteam</Link></li>
+          <li className={location.pathname === "/Subteams" ? "navbarListItemSelected" : "navbarListItem"}><Link  to = {"/Subteams"}>Subteams</Link></li>
           <li className={location.pathname === "/HowtoContribute" ? "navbarListItemSelected" : "navbarListItem"}><Link to = {"/HowtoContribute"}>How To Contribute</Link></li>
           <li className={location.pathname === "/Resources" ? "navbarListItemSelected" : "navbarListItem"}><Link to = {"/Resources"}>Resources</Link></li>
-          <li className={location.pathname === "/ContactPage" ? "navbarListItemSelected" : "navbarListItem"}><Link to = {"/ContactPage"}>Contact Us</Link></li>
         </ul>
       </nav>
     </header>
