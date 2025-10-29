@@ -5,7 +5,7 @@ function Footer() {
     const discordLink = "https://discord.gg/p2byDUhDAz";
     const instagramLink = "https://www.instagram.com/uci.hfab/";
     const gitHubLink = "https://github.com/hacker-fab/gitbook";
-    const mailLink = "kevinli200555@gmail.com"
+    const mailLink = "irvinehackerfab@gmail.com"
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${mailLink}`;
     return (
         <>
@@ -27,4 +27,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export default Footer; 
