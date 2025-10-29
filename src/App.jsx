@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import HowToContribute from "./pages/HowToContribute";
+import Resources from "./pages/Resources";
+import Subteam from "./pages/Subteam";
 import Footer from "./Footer";
 
 function App() {
@@ -12,9 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/HowtoContribute" element={<About />} />
-          <Route path="/Resources" element={<About />} />
-          <Route path="/Subteams" element={<About />} />
+          <Route path="/HowtoContribute" element={<HowToContribute />} />
+          <Route path="/Resources" element={<Resources />} />
+          <Route path="/Subteams" element={<Subteam />} />
         </Routes>
       </main>
     </Router>
