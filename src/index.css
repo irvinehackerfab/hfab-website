@@ -14,8 +14,8 @@ header{
 }
 
 :root {
-  --primary-yellow: #fecc07; /* your soft yellow */
-  --primary-blue: #255799;   /* optional extra colors */
+  --primary-yellow: #fecc07; /* soft yellow from logo */
+  --primary-blue: #255799;   /* blue from logo */
 }
 
 main {
