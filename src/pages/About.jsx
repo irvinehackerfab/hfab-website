@@ -21,9 +21,9 @@ function About() {
     <>
     {/* Main About Us Content */}
       <div className="PageContainer">
-        <div className={`${styles.ContentContainter}`}>
-          <img src={team_photo} alt="Team Photo" />
-        </div>
+
+          <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
+
         <div className="TextContainer">
           <h1>ABOUT US</h1>
           <p className="BoldBodyText">Who are we?</p>

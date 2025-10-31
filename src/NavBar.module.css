@@ -33,6 +33,7 @@
   padding: 10px;
   margin-right: 20px;
   font-size: large;
+  text-decoration: none;
   color: black;
   background-color: hsl(0, 0%, 100%);
 }
@@ -49,6 +50,7 @@
 
 .navbarListItemSelected {
   list-style-type: none;
+  text-decoration: none;
   padding: 10px;
   margin-right: 20px;
   font-size: large;
@@ -65,3 +67,4 @@
   background-color: var(--primary-blue-dark);
   cursor: pointer;
 }
+

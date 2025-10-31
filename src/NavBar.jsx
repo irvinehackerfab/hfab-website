@@ -27,12 +27,13 @@ function NavBar() {
         <ul className={`${styles.navBarList}`}>
           {/*If the list item is selected, it will be white, if not selected, it will be blue*/}
           {/*The exception is the home page, on the home page, the home page navitem will be blue, the others will be white*/}
-          <li className={`${styles.navbarListItemSelected}`}><Link to={"/"}>Home</Link></li>
-          <li className={listStyle("About")}><Link to={"/About"}>About</Link></li>
-          <li className={listStyle("Subteams")}><Link  to = {"/Subteams"}>Subteams</Link></li>
-          <li className={listStyle("HowtoContribute")}><Link to = {"/HowtoContribute"}>How To Contribute</Link></li>
-          <li className={listStyle("Resources")}><Link to = {"/Resources"}>Resources</Link></li>
-          <li className={listStyle("ContactUs")}><Link to = {"/ContactUs"}>Contact Us</Link></li>
+          <Link className={`${styles.navbarListItemSelected}`}to={"/"}>Home</Link>
+          <Link className={listStyle("About")}to={"/About"}>About</Link>
+          <Link className={listStyle("Subteams")}to={"/Subteams"}>Subteams</Link>
+          <Link className={listStyle("HowtoContribute")}to={"/HowtoContribute"}>How to Contribute</Link>
+          <Link className={listStyle("Resources")}to={"/Resources"}>Resources</Link>
+          <Link className={listStyle("ContactUs")}to={"/ContactUs"}>ContactUs</Link>
+
         </ul>
       </nav>
     </header>
