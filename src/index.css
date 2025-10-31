@@ -7,6 +7,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    height: 150px;
     margin: 0px;
     padding: 0px;
     background-color: rgb(255, 255, 255);
@@ -14,13 +15,58 @@ header{
 }
 
 :root {
-  --primary-yellow: #fecc07; /* soft yellow from logo */
-  --primary-blue: #255799;   /* dark blue from logo. */
+  --primary-yellow: hsl(48, 99%, 51%); 
+  --primary-yellow-light: hsl(48, 99%, 61%);
+  --primary-yellow-dark: hsl(204, 70%, 80%);
+  --primary-blue: hsl(214, 60%, 37%);   
+  --primary-blue-light: hsl(214, 60%, 47%);   
+  --primary-blue-dark: hsl(214, 60%, 27%);   
+  --secondary-light-blue: #b8c3c6;
 }
 
 main {
   padding: 0 !important;
 }
+
 * {
   font-family: "Lato", sans-serif;
+}
+
+.PageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+.TextContainer {
+  margin: 0;
+  padding: 10%;
+  padding-top: 5%;
+}
+
+.BodyText {
+    color: black;
+    font-size: 1em;
+}
+.BoldBodyText{
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+    color: var(--primary-yellow);
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+p{
+    color: white;
+    font-size: 1em;
+    margin-bottom: 40px;
 }

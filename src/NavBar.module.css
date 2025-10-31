@@ -1,10 +1,16 @@
 /* NavBar.css */
-#navbarLogo {
-  width: 100px; 
-  height: auto; 
+.navbarLogo {
+
+  margin-left: 20px;
 }
-img:hover{
+.navbarLogo:hover{
   scale: 1.1;
+}
+.tagline{
+  display: none;
+}
+.logoContainer:hover .tagline{
+  display: block;
 }
 /* Navigation Bar Styles */
 #navBarList {
@@ -15,10 +21,11 @@ img:hover{
   align-self: flex-end;
 }
 /* Navbar Logo Container */
-#logoContainer {
+.logoContainer {
   display: flex;
   flex-direction: row;
-
+  height: 125px;
+  width: 125px;
 }
 /* Navigation Bar List Item Styles */
 .navbarListItem {

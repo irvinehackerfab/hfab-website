@@ -2,7 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "./assets/hf_logo_text.png";
-import "./NavBar.css";
+import styles from "./NavBar.module.css";
 function NavBar() {
   // state variable to keep track of what page we're on
   // the li changes design based on if it's on the page
@@ -12,26 +12,27 @@ function NavBar() {
   const headerStyle = {
     backgroundColor: location.pathname !== "/" ? "var(--primary-blue)" : "white"};
   const listStyle = (navBarItem) =>{
-    return location.pathname === "/" ? "navbarListItem" : location.pathname === `/${navBarItem}` ? "navbarListItem": "navbarListItemSelected"
+    return location.pathname === "/" ? `${styles.navbarListItem}` : location.pathname === `${styles.navBarItem}` ? `${styles.navbarListItem}`: `${styles.navbarListItemSelected}`;
   };
   return (
     <header style={headerStyle}>
       {/* Logo Image */}
-      <div id = "logoContainer">
-        <img id="navbarLogo" src={logo} alt="Irvine Hacker Fab"></img>
-        <h1>Cool club tagline</h1>
+      
+      <div className = {`${styles.logoContainer}`}>
+        <img className={`${styles.navbarLogo}`} src={logo} alt="Irvine Hacker Fab"></img>
+        <h3 className={`${styles.tagline}`}>Zot! Zot! Zot!</h3>
       </div>
       <nav>
         {/* list of navigation links */}
-        <ul id="navBarList">
+        <ul id={`${styles.navBarList}`}>
           {/*If the list item is selected, it will be white, if not selected, it will be blue*/}
           {/*The exception is the home page, on the home page, the home page navitem will be blue, the others will be white*/}
-          <li className={"navbarListItemSelected"}><Link to={"/"}>Home</Link></li>
+          <li className={`${styles.navbarListItemSelected}`}><Link to={"/"}>Home</Link></li>
           <li className={listStyle("About")}><Link to={"/About"}>About</Link></li>
           <li className={listStyle("Subteams")}><Link  to = {"/Subteams"}>Subteams</Link></li>
           <li className={listStyle("HowtoContribute")}><Link to = {"/HowtoContribute"}>How To Contribute</Link></li>
           <li className={listStyle("Resources")}><Link to = {"/Resources"}>Resources</Link></li>
-          <li className={location.pathname === "/ContactUs" ? "navbarListItemSelected" : "navbarListItem"}><Link to = {"/ContactUs"}>Contact Us</Link></li>
+          <li className={listStyle("ContactUs")}><Link to = {"/ContactUs"}>Contact Us</Link></li>
         </ul>
       </nav>
     </header>

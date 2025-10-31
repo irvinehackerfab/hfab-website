@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../Footer";
-import "./Home.css";
+import styles from"./Home.module.css";
 function Home() {
   const eventType = "General Meeting";
   const eventDate = "October 31st";
@@ -9,18 +9,18 @@ function Home() {
   const eventDescription = "Happy Halloween!";
   return (
     <>
-      <div id="homePageContainer">
-        <div id="homePageTextContent">
+      <div className={`${styles.homePageContainer}`}>
+        <div className={`${styles.homePageTextContent}`}>
           <h1>UCI HACKER FAB</h1>
-          <p id = "">Join the future of semiconductor manufacturing and design!</p>
-          <div id="nextEventContainer">
-            <h2 id="eventType">Next Event: {eventType}</h2>
-            <p id="eventDate">{eventDate}</p>
-            <p id="eventLocation">{eventLocation}</p>
-            <p id="eventTime">{eventTime}</p>
-            <p id="eventDescription">{eventDescription}</p>
+          <p className = "">Join the future of semiconductor manufacturing and design!</p>
+          <div className={`${styles.nextEventContainer}`}>
+            <h2 className={`${styles.eventType}`}>Next Event: {eventType}</h2>
+            <p className={`${styles.eventDate}`}>{eventDate}</p>
+            <p className={`${styles.eventLocation}`}>{eventLocation}</p>
+            <p className={`${styles.eventTime}`}>{eventTime}</p>
+            <p className={`${styles.eventDescription}`}>{eventDescription}</p>
           </div>
-          <button id="learnMoreButton">
+          <button className={`${styles.learnMoreButton}`}>
             Learn More
           </button>
         </div>

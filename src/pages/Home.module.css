@@ -1,33 +1,18 @@
-#homePageContainer{
+.homePageContainer{
     background-color: var(--primary-blue);
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-#homePageTextContent{
+.homePageTextContent{
     margin: 0;
     padding: 10%;
     padding-top: 5%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-h1{
-    color: var(--primary-yellow);
-    font-size: 4em;
-    margin-bottom: 20px;
-}
-p{
-    color: white;
-    font-size: 1em;
-    margin-bottom: 40px;
-}
-#nextEventContainer{
+.nextEventContainer{
     background-color: var(--secondary-light-blue);
     width: 40%;
     padding: 2%;
@@ -40,19 +25,19 @@ p{
     text-align: left;
     border-radius: 10px;
 }
-#learnMoreButton{
+.learnMoreButton{
     background-color: var(--primary-yellow);
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     border-radius: 10px;
 }
-#learnMoreButton:hover{
+.learnMoreButton:hover{
     background-color: var(--primary-yellow-light);
     scale: 1.05;
     cursor: pointer;
 }
-#eventType{
+.eventType{
     font-weight: bold;
     font-size: 1.2em;
     margin-top: 5px;
@@ -60,7 +45,7 @@ p{
     color: black;
     text-align: left;
 }
-#eventDate, #eventLocation, #eventTime,#eventDescription {
+.eventDate, .eventLocation, .eventTime,.eventDescription {
     margin-top: 5px;
     margin-bottom: 5px;
     color: black;

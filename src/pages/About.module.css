@@ -1,0 +1,15 @@
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.ContentContainter{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 10%;
+  height: auto;
+}
