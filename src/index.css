@@ -14,13 +14,8 @@ header{
 }
 
 :root {
-  --primary-yellow: hsl(48, 99%, 51%); 
-  --primary-yellow-dark: hsl(48, 99%, 41%);
-  --primary-yellow-light: hsl(48, 99%, 61%);
-  --primary-blue: hsl(214, 61%, 37%);   
-  --primary-blue-dark: hsl(214, 61%, 27%);
-  --secondary-light-blue: #b4c3cb;
-
+  --primary-yellow: #fecc07; /* soft yellow from logo */
+  --primary-blue: #255799;   /* dark blue from logo. */
 }
 
 main {

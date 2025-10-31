@@ -31,6 +31,7 @@ function NavBar() {
           <li className={listStyle("Subteams")}><Link  to = {"/Subteams"}>Subteams</Link></li>
           <li className={listStyle("HowtoContribute")}><Link to = {"/HowtoContribute"}>How To Contribute</Link></li>
           <li className={listStyle("Resources")}><Link to = {"/Resources"}>Resources</Link></li>
+          <li className={location.pathname === "/ContactUs" ? "navbarListItemSelected" : "navbarListItem"}><Link to = {"/ContactUs"}>Contact Us</Link></li>
         </ul>
       </nav>
     </header>
