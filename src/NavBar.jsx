@@ -12,7 +12,7 @@ function NavBar() {
   const headerStyle = {
     backgroundColor: location.pathname !== "/" ? "var(--primary-blue)" : "white"};
   const listStyle = (navBarItem) =>{
-    return location.pathname === "/" ? `${styles.navbarListItem}` : location.pathname === `${styles.navBarItem}` ? `${styles.navbarListItem}`: `${styles.navbarListItemSelected}`;
+    return location.pathname === "/" ? `${styles.navbarListItem}` : location.pathname === `/${navBarItem}` ? `${styles.navbarListItem}`: `${styles.navbarListItemSelected}`;
   };
   return (
     <header style={headerStyle}>
@@ -24,7 +24,7 @@ function NavBar() {
       </div>
       <nav>
         {/* list of navigation links */}
-        <ul id={`${styles.navBarList}`}>
+        <ul className={`${styles.navBarList}`}>
           {/*If the list item is selected, it will be white, if not selected, it will be blue*/}
           {/*The exception is the home page, on the home page, the home page navitem will be blue, the others will be white*/}
           <li className={`${styles.navbarListItemSelected}`}><Link to={"/"}>Home</Link></li>

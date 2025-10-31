@@ -13,7 +13,7 @@
   display: block;
 }
 /* Navigation Bar Styles */
-#navBarList {
+.navBarList {
   display: flex;
   flex-direction: row;
   padding: 0;
