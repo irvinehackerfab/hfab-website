@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import styles from "./About.module.css";
 import logo from "../assets/hf_logo.png";
 function About() {
+  // Board members data, add more members as needed
   const BoardMembers = [
     { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
     { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
@@ -18,6 +19,7 @@ function About() {
   ];
   return (
     <>
+    {/* Main About Us Content */}
       <div className="PageContainer">
         <div className={`${styles.ContentContainter}`}>
           <img src={team_photo} alt="Team Photo" />
@@ -34,12 +36,12 @@ function About() {
           </p>
         </div>
       </div>
+      {/* Board Member Content */}
       <div className={`${styles.BoardMembersContainer}`}>
         <div className="TextContainer">
           <h1>BOARD MEMBERS</h1>
         </div>
         <div className={`${styles.BoardMembersIconContainer}`}>
-
           {BoardMembers.map((member, index) => (
             <div key={index} className={styles.boardCard}>
               <img src={member.image} alt={member.name} className={styles.boardImage} />
