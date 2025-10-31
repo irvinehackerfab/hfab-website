@@ -28,7 +28,7 @@ p{
     margin-bottom: 40px;
 }
 #nextEventContainer{
-    background-color: rgb(196, 196, 196);
+    background-color: var(--secondary-light-blue);
     width: 40%;
     padding: 2%;
     height: auto;
@@ -38,12 +38,18 @@ p{
     border: 2px solid black;
     margin-bottom: 40px;
     text-align: left;
+    border-radius: 10px;
 }
 #learnMoreButton{
     background-color: var(--primary-yellow);
     border: none;
     padding: 10px 20px;
     font-size: 1em;
+    border-radius: 10px;
+}
+#learnMoreButton:hover{
+    background-color: var(--primary-yellow-light);
+    scale: 1.05;
     cursor: pointer;
 }
 #eventType{

@@ -18,9 +18,15 @@
 .socialButton{
     height: 3rem;
     width: 3rem;
-    color: #004aad;
+    color: var(--primary-blue);
 }
 .bodyText{
     margin: 0;
     font-size: 100%;
+    font-size: 1rem;
+    color: var(--primary-yellow);
+
+    background-color: hsla(0, 0%, 0%, 0.76);
+    border-radius: 5px;
+    padding: 5px;
 }
