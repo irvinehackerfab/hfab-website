@@ -43,7 +43,8 @@ main {
 .TextContainer {
   margin: 0;
   padding: 10%;
-  padding-top: 5%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 
 .BodyText {
@@ -69,4 +70,8 @@ p{
     color: white;
     font-size: 1em;
     margin-bottom: 40px;
+}
+img{
+    max-width: 70%;
+    height: auto;
 }

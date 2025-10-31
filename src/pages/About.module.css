@@ -1,7 +1,3 @@
-img{
-    height: 100%;
-    width: 100%;
-}
 
 .ContentContainter{
 
@@ -12,4 +8,51 @@ img{
   padding: 0;
   margin-left: 10%;
   height: auto;
+}
+.BoardMembersContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  background-color: var(--primary-blue);
+}
+.BoardMembersIconContainer{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.boardCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-light-blue);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+.member{
+  font-weight: bold;
+  text-align: center;
+}
+.year{
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0;
+  color: black;
+}
+.role{
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0;
+  
 }
