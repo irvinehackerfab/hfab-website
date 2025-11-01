@@ -1,5 +1,8 @@
 /* NavBar.css */
 .navbarLogo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 
   margin-left: 20px;
 }
@@ -19,6 +22,7 @@
   padding: 0;
   margin: 0px;
   align-self: flex-end;
+  
 }
 /* Navbar Logo Container */
 .logoContainer {
@@ -26,6 +30,8 @@
   flex-direction: row;
   height: 125px;
   width: 125px;
+  position: relative;
+  z-index: 10;
 }
 /* Navigation Bar List Item Styles */
 .navbarListItem {
@@ -35,6 +41,8 @@
   font-size: large;
   text-decoration: none;
   color: black;
+  position: relative;
+  z-index: 5;
   background-color: hsl(0, 0%, 100%);
 }
 
