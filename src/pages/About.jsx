@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.module.css";
-import team_photo from "../assets/old_team_photo.jpg";
+import team_photo from "../assets/new_team_photo.jpg";
 import Footer from "../Footer";
 import styles from "./About.module.css";
 import logo from "../assets/hf_logo.png";
