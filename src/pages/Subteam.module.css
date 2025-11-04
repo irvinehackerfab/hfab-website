@@ -1,3 +1,4 @@
+/* Table of Contents Styles */
 .TableOfContents {
   display: flex;
   flex-direction: row;
@@ -21,6 +22,7 @@
   text-decoration: underline;
   cursor: pointer;
 }
+/* Subteam Section Styles */
 .SubteamContainer {
   display: flex;
   flex-direction: row;

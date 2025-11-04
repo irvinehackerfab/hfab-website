@@ -1,21 +1,32 @@
-import React from "react";
+
 import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
 import { useRef } from "react";
-
+// the subteam page, with sections for each subteam
 function Subteam() {
+  // a way to reference each subteam section for scrolling, so far, only tube furnace
   const subTeamRefs = {
     tubeFurnace: useRef(null),
     section2: useRef(null),
     section3: useRef(null),
   };
 
+  // function to handle clicking on the table of contents links, scrolling to the correct section
   function handleLinkClick(section) {
-     subTeamRefs[section].current.scrollIntoView({ behavior: "smooth" });
+    const element = subTeamRefs[section].current;
+    const offset = 200;
+    
+    //needs an offset to account for the navbar
+    window.scrollTo({
+      top: window.scrollY + element.getBoundingClientRect().top - offset,
+      behavior: "smooth"
+    });
+
   }
   return (
     <>
+      {/* Intro Section */}
       <div className="PageContainer">
         <div className="TextContainer">
           <h1>Subteams</h1>
@@ -24,7 +35,7 @@ function Subteam() {
           </p>
         </div>
       </div>
-
+      {/* Table of Contents */}
       <div className={`${styles.TableOfContents}`}>
         <div className="TextContainer">
           <p className="BoldBodyText">
@@ -51,11 +62,11 @@ function Subteam() {
           <h1></h1>
         </div>
       </div>
-
-      <div className="TextContainer">
+      {/* Tube Furnace Section */}
+      <div className="TextContainer" ref={subTeamRefs.tubeFurnace}>
         <h1>Tube Furnace</h1>
       </div>
-      <div className={`${styles.SubteamContainer}`} ref={subTeamRefs.tubeFurnace}>
+      <div className={`${styles.SubteamContainer}`}>
         <div className={`${styles.SubteamTextContainer}`}>
           <p className="BoldBodyText">
             What do we do?
