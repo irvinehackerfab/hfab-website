@@ -2,11 +2,17 @@ import React from "react";
 import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
-
+import { useRef } from "react";
 
 function Subteam() {
-  function hanndleLinkClick() {
+  const subTeamRefs = {
+    tubeFurnace: useRef(null),
+    section2: useRef(null),
+    section3: useRef(null),
+  };
 
+  function handleLinkClick(section) {
+     subTeamRefs[section].current.scrollIntoView({ behavior: "smooth" });
   }
   return (
     <>
@@ -24,7 +30,7 @@ function Subteam() {
           <p className="BoldBodyText">
             Here is our list of our subteams, click on each one to learn more!
           </p>
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("tube-furnace")}>
+          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("tubeFurnace")}>
             1. Tube Furnace
           </p>
           <p className={`${styles.LinkBodyText}`}>
@@ -49,7 +55,7 @@ function Subteam() {
       <div className="TextContainer">
         <h1>Tube Furnace</h1>
       </div>
-      <div className={`${styles.SubteamContainer}`} id="tube-furnace">
+      <div className={`${styles.SubteamContainer}`} ref={subTeamRefs.tubeFurnace}>
         <div className={`${styles.SubteamTextContainer}`}>
           <p className="BoldBodyText">
             What do we do?
