@@ -22,7 +22,7 @@ function About() {
     {/* Main About Us Content */}
       <div className="PageContainer">
 
-          <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
+        <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
 
         <div className="TextContainer">
           <h1>ABOUT US</h1>
