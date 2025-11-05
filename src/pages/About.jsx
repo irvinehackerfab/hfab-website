@@ -7,7 +7,7 @@ import logo from "../assets/hf_logo.png";
 function About() {
   // Board members data, add more members as needed
   const BoardMembers = [
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
+    { name: 'Alexander Y. Hamilton', role: 'President', year: '3rd Year Computer Engineering', image: logo },
     { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
     { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
     { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },

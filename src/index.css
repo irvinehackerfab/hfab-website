@@ -69,6 +69,7 @@ h1{
     font-size: 4em;
     margin-bottom: 20px;
     text-align: left;
+    white-space: nowrap;
 }
 p{
     color: white;
