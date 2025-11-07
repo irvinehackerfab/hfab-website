@@ -21,7 +21,7 @@ function Home() {
             <p className={`${styles.eventTime}`}>{eventTime}</p>
             <p className={`${styles.eventDescription}`}>{eventDescription}</p>
           </div>
-          <Link className={`${styles.learnMoreButton}`}to={"/Subteams"}>Learn More</Link>
+          <Link className={`${styles.learnMoreButton}`}to={"/HowtoContribute"}>Learn More</Link>
         </div>
       </div>
 
