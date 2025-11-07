@@ -43,19 +43,19 @@ function Subteam() {
           </p>
           <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("tubeFurnace")}>
             1. Tube Furnace
-          </p>
+          </p><br />
           <p className={`${styles.LinkBodyText}`}>
             2. Spin Coater
-          </p>
+          </p><br />
           <p className={`${styles.LinkBodyText}`}>
             3. Litho-Stepper
-          </p>
+          </p><br />
           <p className={`${styles.LinkBodyText}`}>
             4. Sputtering
-          </p>
+          </p><br />
           <p className={`${styles.LinkBodyText}`}>
             5. Thermal Evaporation
-          </p>
+          </p><br />
           <p className={`${styles.LinkBodyText}`}>
             6. Research and Development
           </p>

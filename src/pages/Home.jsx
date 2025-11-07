@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import styles from"./Home.module.css";
+import { Link, useLocation } from "react-router-dom";
 function Home() {
   const eventType = "General Meeting";
   const eventDate = "October 31st";

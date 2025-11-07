@@ -1,0 +1,44 @@
+.HowContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2%;
+  align-items: stretch;
+  gap: 2%;
+}
+.HowTextContainer {
+  background-color: var(--secondary-light-blue);
+  max-width: 40%;
+  padding: 2%;
+  width: 30%;
+  border: 2px solid black;
+  margin-left: 8%;
+  margin-right: 2%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.HowMediaContainer {
+  background-color: var(--primary-blue);
+  width: 50%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.HowMediaContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  display: inline;
+  border: 2px solid black;
+}
+.HowMediaContainer img:hover {
+  scale: 1.1;
+}
