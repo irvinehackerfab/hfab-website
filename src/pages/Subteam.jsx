@@ -2,6 +2,7 @@
 import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
+import spin_coater_subteam from "../assets/spin_coater_subteam.jpg";
 import { useRef } from "react";
 // the subteam page, with sections for each subteam
 function Subteam() {
@@ -105,7 +106,7 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-            <img src={team_photo} alt="Team Photo" />
+            <img src={spin_coater_subteam} alt="Team Photo" />
         </div>
       </div>
       {/* Litho Stepper Section */}
