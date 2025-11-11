@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/uci-hacker-fab-website">
       <NavBar />
       <main style={{ padding: "1rem" }}>
         <Routes>
