@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import styles from"./Home.module.css";
+import home_picture from "../assets/home_picture.jpg";
 import { Link, useLocation } from "react-router-dom";
 function Home() {
   const eventType = "General Meeting";
@@ -23,6 +24,7 @@ function Home() {
           </div>
           <Link className={`${styles.learnMoreButton}`}to={"/HowtoContribute"}>Learn More</Link>
         </div>
+        <img id = {`${styles.homePageImage}`} src={home_picture} alt="picture with the dean" />
       </div>
 
 
