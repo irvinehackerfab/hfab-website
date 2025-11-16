@@ -21,7 +21,7 @@ header{
   --primary-yellow: hsl(48, 99%, 51%); 
   --primary-yellow-light: hsl(48, 99%, 61%);
   --primary-yellow-dark: hsl(204, 70%, 80%);
-  --primary-blue: hsl(214, 60%, 37%);   
+  --primary-blue: #265797;   
   --primary-blue-light: hsl(214, 60%, 47%);   
   --primary-blue-dark: hsl(214, 60%, 27%);   
   --secondary-light-blue: #b8c3c6;
@@ -33,6 +33,7 @@ main {
 
 * {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 .PageContainer {

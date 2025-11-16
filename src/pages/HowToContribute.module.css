@@ -39,7 +39,8 @@
   padding: 0;
   display: inline-block;
   border: 2px solid black;
+
 }
 .HowMediaContainer img:hover {
-  scale: 1.1;
+  filter: brightness(1.5)
 }

@@ -2,6 +2,12 @@
 import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
+
+import SpinCoaterIntro from "../assets/subteam_imgs/SpinCoaterIntro.jpg";
+import TubeFurnaceIntro from "../assets/subteam_imgs/TubeFurnaceIntro.jpg";
+import SputteringIntro from "../assets/subteam_imgs/SputteringIntro.jpg";
+import ThermalEvapIntro from "../assets/subteam_imgs/ThermalEvapIntro.jpg";
+import LithoStepperIntro from "../assets/subteam_imgs/LithoStepperIntro.jpg";
 import { useRef } from "react";
 // the subteam page, with sections for each subteam
 function Subteam() {
@@ -12,6 +18,7 @@ function Subteam() {
     lithoStepper: useRef(null),
     sputtering: useRef(null),
     thermalEvaporation: useRef(null),
+    rAndD: useRef(null),
   };
 
   // function to handle clicking on the table of contents links, scrolling to the correct section
@@ -66,7 +73,7 @@ function Subteam() {
       </div>
       {/* Tube Furnace Section */}
       <div className="TextContainer" ref={subTeamRefs.tubeFurnace}>
-        <h1>Tube Furnace</h1>
+        <h1></h1>
       </div>
       <div className={`${styles.SubteamContainer}`}>
         <div className={`${styles.SubteamTextContainer}`}>
@@ -83,12 +90,12 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-          <img src={team_photo} alt="Team Photo" />
+          <img src={TubeFurnaceIntro} alt="Spin Coater Intro Slide" />
         </div>
       </div>
       {/* Spin Coater Section */}
-      <div className="TextContainer" ref={subTeamRefs.spinCoater}>
-        <h1>Spin Coater</h1>
+      <div ref={subTeamRefs.spinCoater}>
+        <h1></h1>
       </div>
       <div className={`${styles.SubteamContainer}`} >
         <div className={`${styles.SubteamTextContainer}`}>
@@ -105,12 +112,12 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-            <img src={team_photo} alt="Team Photo" />
+            <img src={SpinCoaterIntro} alt="Spin Coater Intro Image" />
         </div>
       </div>
       {/* Litho Stepper Section */}
       <div className="TextContainer" ref={subTeamRefs.lithoStepper}>
-        <h1>LithoStepper</h1>
+        <h1></h1>
       </div>
       <div className={`${styles.SubteamContainer}`}>
         <div className={`${styles.SubteamTextContainer}`}>
@@ -127,12 +134,12 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-          <img src={team_photo} alt="Team Photo" />
+          <img src={LithoStepperIntro} alt="Team Photo" />
         </div>
       </div>
       {/* Sputtering Section */}
       <div className="TextContainer" ref={subTeamRefs.sputtering}>
-        <h1>Sputtering</h1>
+        <h1></h1>
       </div>
       <div className={`${styles.SubteamContainer}`}>
         <div className={`${styles.SubteamTextContainer}`}>
@@ -150,12 +157,12 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-          <img src={team_photo} alt="Team Photo" />
+          <img src={SputteringIntro} alt="Sputtering Intro Slide" />
         </div>
       </div>
       {/* Thermal Evaporation */}
       <div className="TextContainer" ref={subTeamRefs.thermalEvaporation}>
-        <h1>Thermal Evaporation</h1>
+        <h1></h1>
       </div>
       <div className={`${styles.SubteamContainer}`}>
         <div className={`${styles.SubteamTextContainer}`}>
@@ -172,7 +179,30 @@ function Subteam() {
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>
-          <img src={team_photo} alt="Team Photo" />
+          <img src={ThermalEvapIntro} alt="Thermal Evap Intro SLide" />
+        </div>
+      </div>
+      {/* Research and Development*/}
+      <div className="TextContainer" ref={subTeamRefs.rAndD}>
+        <h1>Research and Development</h1>
+      </div>
+      <div className={`${styles.SubteamContainer}`}>
+        <div className={`${styles.SubteamTextContainer}`}>
+          <p className="BoldBodyText">
+            Background Information
+          </p>
+          <p className="BodyText">
+            We have an R&D subteam that focuses on exploring new technologies and methods in semiconductor fabrication. This team conducts experiments, analyzes data, and develops innovative solutions to improve our processes and equipment. Members of the R&D subteam work closely with other subteams to implement their findings and drive continuous improvement within the club. The R&D subteam is essential for keeping our club at the forefront of semiconductor technology and fostering a culture of innovation. In addition, this team focuses on gathering funding.  
+          </p>
+          <p className="BoldBodyText">
+            What skills are we looking for?
+          </p>
+          <p className="BodyText">
+            Research, Technical Writing, Fundraising, and Presentation Skills.
+          </p>
+        </div>
+        <div className={`${styles.SubteamMediaContainer}`}>
+          <img src={team_photo} alt="" />
         </div>
       </div>
       <Footer></Footer>

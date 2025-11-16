@@ -26,7 +26,7 @@
 /* Subteam Section Styles */
 .SubteamContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;

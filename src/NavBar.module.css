@@ -3,17 +3,13 @@
   width: 100%;
   height: auto;
   object-fit: contain;
-
   margin-left: 20px;
-}
-.navbarLogo:hover{
-  scale: 1.1;
 }
 .tagline{
   display: none;
 }
 .logoContainer:hover .tagline{
-  display: block;
+  display: inline;
 }
 /* Navigation Bar Styles */
 .navBarList {
