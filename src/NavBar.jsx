@@ -44,7 +44,7 @@ function NavBar() {
           <Link className={listStyle("About")}to={"/About"}>About</Link>
           <Link className={listStyle("Subteams")}to={"/Subteams"}>Subteams</Link>
           <Link className={listStyle("HowtoContribute")}to={"/HowtoContribute"}>How to Contribute</Link>
-          {/*<Link className={listStyle("Resources")}to={"/Resources"}>Resources</Link>*/}
+          <Link className={listStyle("Resources")}to={"/Resources"}>Resources</Link>*/
           <Link className={listStyle("ContactUs")}to={"/ContactUs"}>Contact Us</Link>
 
         </ul>
