@@ -1,10 +1,17 @@
 import React from "react";
-
+import Footer from "../Footer";
 function Resources() {
   return (
-    <div>
-      <h1>Resources</h1>
-    </div>
+    <>
+      <div className="PageContainer">
+        <div className="TextContainer">
+          <h1>Resources</h1>
+        </div>
+
+      </div>
+      <Footer></Footer>
+    </>
+
   );
 }
 
