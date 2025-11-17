@@ -15,15 +15,12 @@ function NavBar() {
     console.log(location.pathname);
     console.log(navBarItem);
     if (location.pathname === "/") {
-      console.log("1");
       return `${styles.navbarListItem}`;
     }
     else if (location.pathname === `/${navBarItem}`) {
-      console.log("2");
       return `${styles.navbarListItem}`;
     }
     else{
-      console.log("3");
       return `${styles.navbarListItemSelected}`;
     }
   };

@@ -25,7 +25,7 @@ function About() {
         <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
 
         <div className="TextContainer">
-          <h1>ABOUT US</h1>
+          <h1>About us</h1>
           <p className="BoldBodyText">Who are we?</p>
           <p className="BodyText">
             The Irvine Hacker Fab is an interdisciplinary team dedicated to creating open-source solutions for microchip fabrication. As part of a broader network that includes CMU, OSU, UW, and MIT, we aim to democratize semiconductor manufacturing by developing innovative, cost-effective tools and materials.
@@ -39,7 +39,7 @@ function About() {
       {/* Board Member Content */}
       <div className={`${styles.BoardMembersContainer}`}>
         <div className="TextContainer">
-          <h1>BOARD MEMBERS</h1>
+          <h1>Board Members</h1>
         </div>
         <div className={`${styles.BoardMembersIconContainer}`}>
           {BoardMembers.map((member, index) => (

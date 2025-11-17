@@ -82,3 +82,7 @@ img{
     max-width: 70%;
     height: auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}

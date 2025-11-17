@@ -1,0 +1,81 @@
+.ContactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  padding: 5%;
+  background-color: var(--primary-blue);
+  margin: 5%;
+  border-radius: 10px;
+}
+
+#contactTextContainer {
+  grid-column: 1 / span 2;
+}
+
+.emailContainer {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 0px;
+}
+#FirstNameText {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  text-align: center;
+}
+#LastNameText {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  text-align: center;
+}
+#subjectText {
+  grid-column: 1 / span 2;
+  text-align: center;
+  grid-row: 3;
+}
+#messageText {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+#firstNameInput {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+}
+#LastNameInput {
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+#subjectInput {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+#messageInput {
+  grid-column: 1 / span 2;
+  grid-row: 6;
+  height: 150px;
+  min-width: 100%;
+  resize: vertical;
+}
+.emailContainer textarea {
+  margin: 0; /* remove spacing inside rows */
+}
+.emailContainer p {
+  margin-top: 20px; /* remove spacing inside rows */
+  margin-bottom: 5px;
+}
+.submitLink{
+    text-decoration: none;
+    margin-top: 10%;
+    color: black;
+    background-color: var(--primary-yellow);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1em;
+}
