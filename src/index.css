@@ -27,6 +27,9 @@ header{
   --secondary-light-blue: #b8c3c6;
 }
 
+
+
+
 main {
   padding: 0 !important;
 }
@@ -49,7 +52,18 @@ main {
   padding: 10%;
   padding-top: 0%;
   padding-bottom: 0%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
 }
+
+.TextContainer h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.TextContainer p {
+  text-shadow: none; /* ensure paragraphs remain normal */
+}
+
 
 .BodyText {
     color: black;
