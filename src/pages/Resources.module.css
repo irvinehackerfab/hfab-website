@@ -26,27 +26,23 @@
 /* Cards Section Styles */
 .ResourcesCardsContainer {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-wrap: wrap; /* wrap on smaller screens */
   justify-content: center;
-  gap: 50px;
+  align-items: flex-start;
+  gap: 20px; /* space between cards */
   padding: 0 40px;
   margin-bottom: 80px;
-  flex-wrap: wrap; /* wrap on smaller screens */
 }
 
 /* Individual Card */
 .ResourceCard {
-  width: 380px;
-  height: 380px;
-  background: #d9d9d9;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  height: 430px; /* keep the same height */
+  width: 280px; /* smaller width to fit multiple cards in a row */
+  background: var(--secondary-light-blue);
+  padding: 2%;
+  margin: 0 10px; /* horizontal spacing between cards */
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 /* Text inside Card */
@@ -64,7 +60,7 @@
 
 .ResourceDescription {
   font-size: 0.9rem;
-  color: black
+  color: black;
 }
 
 /* Responsive adjustments */
