@@ -4,7 +4,7 @@ import styles from "./Footer.module.css"
 function Footer() {
     const discordLink = "https://discord.gg/p2byDUhDAz";
     const instagramLink = "https://www.instagram.com/uci.hfab/";
-    const gitHubLink = "https://github.com/hacker-fab/gitbook";
+    const gitHubLink = "https://github.com/irvinehackerfab";
     const mailLink = "irvinehackerfab@gmail.com"
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${mailLink}`;
     const linkTreeLink = "https://linktr.ee/IrvineHackerFab?fbclid=PAZXh0bgNhZW0CMTEAAac_6Bug9u7huxEPeX3qgwWg3h8uP4Y9Y2oZP4DeIv7vDJJ16qKBxogOCIhpxQ_aem_qt6oMqUrW0fsw9oy6V3oDA";
