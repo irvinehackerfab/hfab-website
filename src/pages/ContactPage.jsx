@@ -48,7 +48,7 @@ function ContactPage() {
             </a>
 
           </div>
-          <img src={contact_page_image} alt="discord information" />
+          <img src={contact_page_image} alt="discord information" id = {`${styles.LinkImage}`}/>
         </div>
 
       </div>

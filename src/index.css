@@ -3,32 +3,28 @@ body {
   padding: 0;
 }
 
-header{
-    
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    height: 150px;
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
-    top: 0;
-    position: sticky;
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 150px;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
 }
 
 :root {
-  --primary-yellow: hsl(48, 99%, 51%); 
+  --primary-yellow: hsl(48, 99%, 51%);
   --primary-yellow-light: hsl(48, 99%, 61%);
   --primary-yellow-dark: hsl(204, 70%, 80%);
-  --primary-blue: #265797;   
-  --primary-blue-light: hsl(214, 60%, 47%);   
-  --primary-blue-dark: hsl(214, 60%, 27%);   
+  --primary-blue: #265797;
+  --primary-blue-light: hsl(214, 60%, 47%);
+  --primary-blue-dark: hsl(214, 60%, 27%);
   --secondary-light-blue: #b8c3c6;
 }
-
-
-
 
 main {
   padding: 0 !important;
@@ -46,55 +42,56 @@ main {
   justify-content: start;
   width: 100%;
   margin: 0;
+  flex-wrap: wrap;
+  flex: 1 1 300px;
 }
 .TextContainer {
   margin: 0;
   padding: 10%;
   padding-top: 0%;
   padding-bottom: 0%;
+  width: auto;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-
 }
 
 .TextContainer h1 {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .TextContainer p {
   text-shadow: none; /* ensure paragraphs remain normal */
 }
 
-
 .BodyText {
-    color: black;
-    font-size: 1em;
+  color: black;
+  font-size: 1em;
 }
-.BoldBodyText{
-    color: black;
-    font-size: 1.25em;
-    font-weight: bold;
+.BoldBodyText {
+  color: black;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1{
-    color: var(--primary-yellow);
-    font-size: 4em;
-    margin-bottom: 20px;
-    text-align: left;
-    white-space: nowrap;
-    margin-left: 0;
+h1 {
+  color: var(--primary-yellow);
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-align: left;
+  white-space: nowrap;
+  margin-left: 0;
 }
-p{
-    color: white;
-    font-size: 1em;
-    margin-bottom: 40px;
+p {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 40px;
 }
-img{
-    max-width: 70%;
-    height: auto;
+img {
+  max-width: 70%;
+  height: auto;
 }
 
 html {

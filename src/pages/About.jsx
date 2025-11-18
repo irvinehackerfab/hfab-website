@@ -21,11 +21,14 @@ function About() {
     <>
     {/* Main About Us Content */}
       <div className="PageContainer">
-
-        <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
+        <div className="TextContainer">
+        <h1>About us</h1>
+        </div>
+          <img className={`${styles.ContentContainter}`} src={team_photo} alt="Team Photo" />
+        
 
         <div className="TextContainer">
-          <h1>About us</h1>
+          
           <p className="BoldBodyText">Who are we?</p>
           <p className="BodyText">
             The Irvine Hacker Fab is an interdisciplinary team dedicated to creating open-source solutions for microchip fabrication. As part of a broader network that includes CMU, OSU, UW, and MIT, we aim to democratize semiconductor manufacturing by developing innovative, cost-effective tools and materials.
@@ -44,7 +47,7 @@ function About() {
         <div className={`${styles.BoardMembersIconContainer}`}>
           {BoardMembers.map((member, index) => (
             <div key={index} className={styles.boardCard}>
-              <img src={member.image} alt={member.name} className={styles.boardImage} />
+              <img src={member.image} alt={member.name} className={styles.BoardImage} />
               <h3 className = {`${styles.member}`}>{member.name}</h3>
               <p className = {`${styles.year}`}>{member.year}</p>
               <p className = {`${styles.role}`}>{member.role}</p>

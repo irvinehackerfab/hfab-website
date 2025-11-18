@@ -1,81 +1,74 @@
 .ContactContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  justify-items: center;
-  align-items: center;
-  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;            /* full width of parent */
+  max-width: 1200px;      /* optional max width for large screens */
+  padding: 20px;          /* inner spacing */
   background-color: var(--primary-blue);
-  margin: 5%;
   border-radius: 10px;
+  box-sizing: border-box;
+  margin: 20px auto;      /* top/bottom spacing, centered */
 }
 
 #contactTextContainer {
-  grid-column: 1 / span 2;
+  flex: 1 1 100%;           /* full width header/text */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .emailContainer {
-  display: grid;
-  grid-template-rows: auto auto auto auto auto auto auto;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 10%;
-  align-items: center;
-  column-gap: 20px;
-  row-gap: 0px;
-}
-#FirstNameText {
-  grid-column: 1 / span 1;
-  grid-row: 1;
-  text-align: center;
-}
-#LastNameText {
-  grid-column: 2 / span 1;
-  grid-row: 1;
-  text-align: center;
-}
-#subjectText {
-  grid-column: 1 / span 2;
-  text-align: center;
-  grid-row: 3;
-}
-#messageText {
-  grid-column: 1 / span 2;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1 1 400px;          /* responsive width for form */
+  justify-content: center;
 }
 
-#firstNameInput {
-  grid-column: 1 / span 1;
-  grid-row: 2;
+.emailContainer p,
+.emailContainer input,
+.emailContainer textarea {
+  flex: 1 1 100%;            /* inputs stack on small screens */
+  margin: 5px 0;
+  box-sizing: border-box;
 }
-#LastNameInput {
-  grid-column: 2 / span 1;
-  grid-row: 2;
-}
-#subjectInput {
-  grid-column: 1 / span 2;
-  grid-row: 4;
-}
+
 #messageInput {
-  grid-column: 1 / span 2;
-  grid-row: 6;
   height: 150px;
-  min-width: 100%;
   resize: vertical;
 }
-.emailContainer textarea {
-  margin: 0; /* remove spacing inside rows */
+
+.submitLink {
+  text-decoration: none;
+  color: black;
+  background-color: var(--primary-yellow);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+  display: inline-block;
 }
-.emailContainer p {
-  margin-top: 20px; /* remove spacing inside rows */
-  margin-bottom: 5px;
+
+#LinkImage {
+  flex: 1 1 300px;           /* image can shrink/grow */
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
 }
-.submitLink{
-    text-decoration: none;
-    margin-top: 10%;
-    color: black;
-    background-color: var(--primary-yellow);
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 1em;
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .ContactContainer {
+    flex-direction: column;
+    padding: 10px;        /* less padding on small screens */
+    margin: 10px;          /* less margin so it doesn’t cut off */
+  }
+
+  .emailContainer,
+  #LinkImage {
+    flex: 1 1 100%;       /* full width on mobile */
+  }
 }
