@@ -7,13 +7,11 @@ function Resources() {
 
   return (
     <>
-      {/* Page Container */}
-      <div className={`${styles.ResourcesPageContainer}`}>
-        {/* Header */}
-        <div className={`${styles.ResourcesHeaderContainer}`}>
+     <div className="PageContainer">
+        <div className="TextContainer">
           <h1>Resources</h1>
         </div>
-
+      </div>
         {/* Cards Section */}
         <div className={`${styles.ResourcesCardsContainer}`}>
           {/* Empty card for spacing */}
@@ -32,7 +30,6 @@ function Resources() {
           {/* Empty card for spacing */}
           <div className={`${styles.ResourceCard}`}></div>
         </div>
-      </div>
 
       <Footer />
     </>
