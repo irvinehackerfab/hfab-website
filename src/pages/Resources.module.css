@@ -52,14 +52,19 @@
 /* Text inside Card */
 .ResourceLink {
   font-size: 16px;
-  color: #ffffff;
+  color: black;
   margin-bottom: 10px;
 }
 
 .ResourceLabel {
   font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
+  color: black;
+}
+
+.ResourceDescription {
+  font-size: 0.9rem;
+  color: black
 }
 
 /* Responsive adjustments */
