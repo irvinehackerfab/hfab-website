@@ -1,0 +1,77 @@
+/* Resources Page Container */
+.ResourcesPageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2%;
+  background-color: var(--primary-blue);
+  align-items: center;
+}
+
+/* Header Text Container */
+.ResourcesHeaderContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.ResourcesHeaderContainer h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-yellow);
+}
+
+/* Cards Section Styles */
+.ResourcesCardsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 40px;
+  margin-bottom: 80px;
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+/* Individual Card */
+.ResourceCard {
+  width: 380px;
+  height: 380px;
+  background: #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Text inside Card */
+.ResourceLink {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.ResourceLabel {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .ResourcesCardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ResourceCard {
+    width: 85%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+}
