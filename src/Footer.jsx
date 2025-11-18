@@ -25,7 +25,7 @@ function Footer() {
                         <CiCircleMore className={`${styles.socialButton}`} />
                     </a>
                 </div>
-                <h1 className = {`${styles.bodyText}`}>UCI Facker Hab 2025</h1>
+                <h1 className = {`${styles.bodyText}`}>UCI Hacker Fab 2025</h1>
             </div>
         </>
     );
