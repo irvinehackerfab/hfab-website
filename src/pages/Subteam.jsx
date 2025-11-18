@@ -1,4 +1,3 @@
-
 import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
@@ -9,9 +8,8 @@ import SputteringIntro from "../assets/subteam_imgs/SputteringIntro.jpg";
 import ThermalEvapIntro from "../assets/subteam_imgs/ThermalEvapIntro.jpg";
 import LithoStepperIntro from "../assets/subteam_imgs/LithoStepperIntro.jpg";
 import { useRef } from "react";
-// the subteam page, with sections for each subteam
+
 function Subteam() {
-  // a way to reference each subteam section for scrolling, so far, only tube furnace
   const subTeamRefs = {
     tubeFurnace: useRef(null),
     spinCoater: useRef(null),
@@ -21,18 +19,15 @@ function Subteam() {
     rAndD: useRef(null),
   };
 
-  // function to handle clicking on the table of contents links, scrolling to the correct section
-  function handleLinkClick(section) {
+  function handleCardClick(section) {
     const element = subTeamRefs[section].current;
     const offset = 200;
-
-    //needs an offset to account for the navbar
     window.scrollTo({
       top: window.scrollY + element.getBoundingClientRect().top - offset,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-
   }
+
   return (
     <>
       {/* Intro Section */}
@@ -44,34 +39,77 @@ function Subteam() {
           </p>
         </div>
       </div>
-      {/* Table of Contents */}
-      <div className={`${styles.TableOfContents}`}>
-        <div className="TextContainer">
-          <p className="BoldBodyText">
-            Here is our list of our subteams, click on each one to learn more!
-          </p>
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("tubeFurnace")}>
-            1. Tube Furnace
-          </p><br />
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("spinCoater")}>
-            2. Spin Coater
-          </p><br />
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("lithoStepper")}>
-            3. LithoStepper
-          </p><br />
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("sputtering")}>
-            4. Sputtering
-          </p><br />
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("thermalEvaporation")}>
-            5. Thermal Evaporation
-          </p><br />
-          <p className={`${styles.LinkBodyText}`} onClick={() => handleLinkClick("tubeFurnace")}>
-            6. Research and Development
-          </p>
-          <h1></h1>
+
+      {/* Subteam Cards */}
+      <div className={`${styles.SubteamCardsContainer}`}>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("tubeFurnace")}
+        >
+          <img
+            src={TubeFurnaceIntro}
+            alt="Tube Furnace"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>Tube Furnace</h2>
+        </div>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("spinCoater")}
+        >
+          <img
+            src={SpinCoaterIntro}
+            alt="Spin Coater"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>Spin Coater</h2>
+        </div>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("lithoStepper")}
+        >
+          <img
+            src={LithoStepperIntro}
+            alt="Litho Stepper"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>Litho Stepper</h2>
+        </div>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("sputtering")}
+        >
+          <img
+            src={SputteringIntro}
+            alt="Sputtering"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>Sputtering</h2>
+        </div>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("thermalEvaporation")}
+        >
+          <img
+            src={ThermalEvapIntro}
+            alt="Thermal Evaporation"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>Thermal Evaporation</h2>
+        </div>
+        <div
+          className={`${styles.SubteamCard}`}
+          onClick={() => handleCardClick("rAndD")}
+        >
+          <img
+            src={team_photo}
+            alt="R&D"
+            className={`${styles.SubteamCardImage}`}
+          />
+          <h2 className={`${styles.SubteamCardTitle}`}>R&D</h2>
         </div>
       </div>
-      {/* Tube Furnace Section */}
+       {/* Tube Furnace Section */}
       <div className="TextContainer" ref={subTeamRefs.tubeFurnace}>
         <h1></h1>
       </div>
@@ -211,3 +249,4 @@ function Subteam() {
 }
 
 export default Subteam;
+     
