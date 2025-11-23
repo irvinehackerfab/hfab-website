@@ -32,12 +32,16 @@ Follow the steps below to set it up locally and run it.
   node -v
   npm -v
 ## 2. Clone the repo
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+  ```bash
+  git clone https://github.com/<your-username>/<your-repo-name>.git
+  cd <your-repo-name>
+  ```
 
 ## 3. Install dependencies
 Run the following command inside the project folder:
-npm install
+  ```bash
+  npm install
+  ```
 This will install all required packages listed in package.json.
 
 ## 4. Start the development server
