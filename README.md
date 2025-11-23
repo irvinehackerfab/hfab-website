@@ -28,9 +28,10 @@ Follow the steps below to set it up locally and run it.
 ## 1. Prerequisites
 - Install [Node.js](https://nodejs.org/) (version 16 or higher recommended).
 - npm comes bundled with Node.js. Verify installation:
-  ```bash
-  node -v
-  npm -v
+```bash
+node -v
+npm -v
+```
 ## 2. Clone the repo
   ```bash
   git clone https://github.com/<your-username>/<your-repo-name>.git
@@ -45,4 +46,6 @@ Run the following command inside the project folder:
 This will install all required packages listed in package.json.
 
 ## 4. Start the development server
+```bash
 npm run dev
+```
