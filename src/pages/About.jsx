@@ -7,14 +7,13 @@ import logo from "../assets/hf_logo.png";
 function About() {
   // Board members data, add more members as needed
   const BoardMembers = [
-    { name: 'Alexander Y. Hamilton', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
-    { name: 'Peter', role: 'President', year: '3rd Year Computer Engineering', image: logo },
+    { name: 'Albert', role: 'President, Lithostepper Lead', year: '', image: logo },
+    { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '', image: logo },
+    { name: 'Aurnob', role: 'Outreach, Spettering Lead', year: '', image: logo },
+    { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
+    { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
+    { name: 'Dylan', role: 'Media', year: '', image: logo },
+    { name: 'Misaki', role: 'Social', year: '', image: logo },
 
   ];
   return (
