@@ -6,6 +6,7 @@ import HowToContribute from "./pages/HowToContribute";
 import Resources from "./pages/Resources";
 import Subteam from "./pages/Subteam";
 import ContactPage from "./pages/ContactPage";
+import ErrorPage from "./pages/ErrorPage";
 import Footer from "./Footer";
 
 function App() {
@@ -17,9 +18,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/HowtoContribute" element={<HowToContribute />} />
+          <Route path="/HowToContribute" element={<HowToContribute />} />
           <Route path="/Resources" element={<Resources />} />
           <Route path="/ContactUs" element={<ContactPage />} />
           <Route path="/Subteams" element={<Subteam />} />
+           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
     </Router>
