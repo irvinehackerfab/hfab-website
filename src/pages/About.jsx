@@ -9,7 +9,7 @@ function About() {
   const BoardMembers = [
     { name: 'Albert', role: 'President, Lithostepper Lead', year: '', image: logo },
     { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '', image: logo },
-    { name: 'Aurnob', role: 'Outreach, Spettering Lead', year: '', image: logo },
+    { name: 'Aurnob', role: 'Outreach, Sputtering Lead', year: '', image: logo },
     { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
     { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
     { name: 'Dylan', role: 'Media', year: '', image: logo },
