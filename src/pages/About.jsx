@@ -4,16 +4,20 @@ import team_photo from "../assets/new_team_photo.jpg";
 import Footer from "../Footer";
 import styles from "./About.module.css";
 import logo from "../assets/hf_logo.png";
+import anthony from "../assets/anthony.jpg"
+import aurnob from "../assets/anthony.jpg"
+import dylan from "../assets/dylan.jpg"
+import misaki from "../assets/misaki.jpg"
 function About() {
   // Board members data, add more members as needed
   const BoardMembers = [
-    { name: 'Albert', role: 'President, Lithostepper Lead', year: '', image: logo },
-    { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '', image: logo },
-    { name: 'Aurnob', role: 'Outreach, Sputtering Lead', year: '', image: logo },
+    { name: 'Albert', role: 'President, Lithostepper Lead', year: '3rd Year', image: logo },
+    { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '4th Year', image: anthony },
+    { name: 'Aurnob', role: 'Outreach, Sputtering Lead', year: '2nd Year', image: aurnob },
     { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
     { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
-    { name: 'Dylan', role: 'Media', year: '', image: logo },
-    { name: 'Misaki', role: 'Social', year: '', image: logo },
+    { name: 'Dylan', role: 'Media', year: '', image: dylan },
+    { name: 'Misaki', role: 'Social', year: '', image: misaki },
 
   ];
   return (
