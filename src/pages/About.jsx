@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import styles from "./About.module.css";
 import logo from "../assets/hf_logo.png";
 import anthony from "../assets/anthony.jpg"
-import aurnob from "../assets/anthony.jpg"
+import aurnob from "../assets/aurnob.jpg"
 import dylan from "../assets/dylan.jpg"
 import misaki from "../assets/misaki.jpg"
 function About() {
