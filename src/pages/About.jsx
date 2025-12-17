@@ -8,14 +8,19 @@ import anthony from "../assets/anthony.jpg"
 import aurnob from "../assets/anthony.jpg"
 import dylan from "../assets/dylan.jpg"
 import misaki from "../assets/misaki.jpg"
+import joey from "../assets/joey.jpg"
+import brycen from "../assets/brycen.jpg"
+import albert from "../assets/albert.jpg"
 function About() {
-  // Board members data, add more members as needed
+  // Board member data
   const BoardMembers = [
-    { name: 'Albert', role: 'President, Lithostepper Lead', year: '3rd Year', image: logo },
+    { name: 'Albert', role: 'President', year: '3rd Year', image: albert },
     { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '4th Year', image: anthony },
     { name: 'Aurnob', role: 'Outreach, Sputtering Lead', year: '2nd Year', image: aurnob },
     { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
     { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
+    { name: 'Joseph', role: 'Lithostepper Lead', year: '1st Year', image: joey },
+    { name: 'Brycen', role: 'Resin Printer Lead', year: '2nd Year', image: brycen },
     { name: 'Dylan', role: 'Media', year: '', image: dylan },
     { name: 'Misaki', role: 'Social', year: '', image: misaki },
 
