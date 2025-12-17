@@ -1,37 +1,49 @@
-import { FaInstagram, FaDiscord, FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiCircleMore } from "react-icons/ci";
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
+import BridgeTronic from "./assets/bridgetronic.jpg";
+
 function Footer() {
     const discordLink = "https://discord.gg/p2byDUhDAz";
     const instagramLink = "https://www.instagram.com/uci.hfab/";
     const gitHubLink = "https://github.com/irvinehackerfab";
-    const linkedinLink = "https://www.linkedin.com/company/irvine-hacker-fab/posts/?feedView=all"
-
+    const linkedinLink = "https://www.linkedin.com/company/irvine-hacker-fab/posts/?feedView=all";
     const linkTreeLink = "https://linktr.ee/IrvineHackerFab?fbclid=PAZXh0bgNhZW0CMTEAAac_6Bug9u7huxEPeX3qgwWg3h8uP4Y9Y2oZP4DeIv7vDJJ16qKBxogOCIhpxQ_aem_qt6oMqUrW0fsw9oy6V3oDA";
+
     return (
         <>
-            <div className={`${styles.Footer}`}>
-                <div className={`${styles.socialContainer}`}>
+            {/* Footer */}
+            <div className={styles.Footer}>
+                <div className={styles.socialContainer}>
                     <a href={instagramLink} target="_blank" rel="noopener noreferrer">
-                        <FaInstagram className={`${styles.socialButton}`} />
+                        <FaInstagram className={styles.socialButton} />
                     </a>
                     <a href={discordLink} target="_blank" rel="noopener noreferrer">
-                        <FaDiscord className={`${styles.socialButton}`} />
+                        <FaDiscord className={styles.socialButton} />
                     </a>
-                    <a href={`${gitHubLink}`} target="_blank" rel="noopener noreferrer">
-                        <FaGithub className={`${styles.socialButton}`} />
+                    <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
+                        <FaGithub className={styles.socialButton} />
                     </a>
-                    <a href={`${linkedinLink}`} target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className={`${styles.socialButton}`} />
+                    <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin className={styles.socialButton} />
                     </a>
-                    <a href={`${linkTreeLink}`} target="_blank" rel="noopener noreferrer">
-                        <CiCircleMore className={`${styles.socialButton}`} />
+                    <a href={linkTreeLink} target="_blank" rel="noopener noreferrer">
+                        <CiCircleMore className={styles.socialButton} />
                     </a>
                 </div>
-                <h1 className = {`${styles.bodyText}`}>UCI Hacker Fab 2025</h1>
+                <h1 className={styles.bodyText}>UCI Hacker Fab 2025</h1>
+            </div>
+
+            {/* Sponsors Section */}
+            <div className={styles.sponsors}>
+                <h2 style={{ textAlign: "center" }}>Our Sponsors</h2>
+                <div className={styles.sponsorLogos}>
+                    {/* Example sponsor logos */}
+                    <img src={BridgeTronic} alt="BridgeTronic" style={{ width: "50%", height: "auto" }} />
+                </div>
             </div>
         </>
     );
 }
 
-export default Footer; 
+export default Footer;
