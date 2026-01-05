@@ -12,8 +12,16 @@ function Footer() {
 
     return (
         <>
+            {/* Sponsors Section */}
+            <div className={styles.sponsors}>
+                
+            </div>
             {/* Footer */}
             <div className={styles.Footer}>
+                <div className={styles.imgContainer}>
+                    <img src={BridgeTronic} alt="BridgeTronic"/>
+                </div>
+                    
                 <div className={styles.socialContainer}>
                     <a href={instagramLink} target="_blank" rel="noopener noreferrer">
                         <FaInstagram className={styles.socialButton} />
@@ -34,14 +42,7 @@ function Footer() {
                 <h1 className={styles.bodyText}>UCI Hacker Fab 2025</h1>
             </div>
 
-            {/* Sponsors Section */}
-            <div className={styles.sponsors}>
-                <h2 style={{ textAlign: "center" }}>Our Sponsors</h2>
-                <div className={styles.sponsorLogos}>
-                    {/* Example sponsor logos */}
-                    <img src={BridgeTronic} alt="BridgeTronic" style={{ width: "50%", height: "auto" }} />
-                </div>
-            </div>
+            
         </>
     );
 }
