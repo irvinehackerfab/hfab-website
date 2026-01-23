@@ -20,7 +20,7 @@ export const UCI_HOLIDAYS = [
 // Define quarter breaks / recess periods as ranges [start, end]
 export const UCI_RECESSES = [
   ["2025-03-23", "2025-03-27"], // Spring Break
-  ["2025-12-15", "2025-12-26"], // Winter Break
+  ["2025-12-15", "2026-01-02"], // Winter Break
 ];
 
 // Check if a date is a holiday or falls within a recess
