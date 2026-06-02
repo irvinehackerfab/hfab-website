@@ -42,7 +42,7 @@ export function getNextMeeting() {
   let next = new Date(today);
 
   const day = today.getDay(); // Sunday=0, Monday=1, ..., Friday=5
-  const daysUntilFriday = (5 - day + 7) % 7 || 7; // Move to next Friday if today is Friday
+  const daysUntilFriday = (5 - day + 7) % 7; // if today is friday, let people know we have a meeting
   next.setDate(today.getDate() + daysUntilFriday);
 
   while (isHolidayOrRecess(next)) {
