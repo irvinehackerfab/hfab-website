@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <Router basename="/hfab-website/">
+    <Router>
       <NavBar />
       <main style={{ padding: "1rem" }}>
         <Routes>
