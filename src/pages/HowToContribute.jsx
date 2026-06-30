@@ -19,18 +19,10 @@ function HowToContribute() {
             Come to our general meetings! We usually have one every week on Fridays from 5-6:30 pm at ISEB 1310.  Also, join our discord for up-to-date information on our events!  Also, check out our subteams! They are a great way to gain experience in semiconductor manufacturing and meet new people
           </p>
           <p className="BoldBodyText">
-            How can I be really cool?
+            How can support Hacker Fab?
           </p>
           <p className="BodyText">
-            Great Question! Check out our ZotFunder. We have a lot of ongoing projects right now that need funding.  Any donations would be greatly appreciated!
-          </p>
-        </div>
-        <div className={`${styles.HowMediaContainer}`}>
-          <a href={zotfunderLink} target="_blank" rel="noopener noreferrer">
-            <img src={zotfunder} alt="ZotFunder Picture" />
-          </a>
-          <p>
-            Click the image to go to our ZotFunder page!
+           We are currently working towards enhancing our donation infrastructure for the 2026-2027 school year. In the meantime, feel free to email irvinehackerfab@gmail.com for more information.
           </p>
         </div>
       </div>

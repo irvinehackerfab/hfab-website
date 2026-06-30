@@ -14,14 +14,13 @@ import albert from "../assets/albert.jpg"
 function About() {
   // Board member data
   const BoardMembers = [
-    { name: 'Albert', role: 'President', year: '3rd Year', image: albert },
-    { name: 'Anthony', role: 'Effective VP, Outreach, Spincoater Lead', year: '4th Year', image: anthony },
-    { name: 'Aurnob', role: 'Outreach, Sputtering Lead', year: '2nd Year', image: aurnob },
+    { name: 'Iurii', role: 'President', year: '2nd Year', image: logo },
+    { name: 'Aurnob', role: 'VP', year: '3rd Year', image: aurnob },
     { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
     { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
     { name: 'Joseph', role: 'Lithostepper Lead', year: '1st Year', image: joey },
     { name: 'Brycen', role: 'Resin Printer Lead', year: '2nd Year', image: brycen },
-    { name: 'Dylan', role: 'Media', year: '', image: dylan },
+    { name: 'Bella', role: 'Spin Coater Lead', year: '2nd Year', image: logo },
     { name: 'Misaki', role: 'Social', year: '', image: misaki },
 
   ];

@@ -18,10 +18,7 @@ function Footer() {
             </div>
             {/* Footer */}
             <div className={styles.Footer}>
-                <div className={styles.imgContainer}>
-                    <img src={BridgeTronic} alt="BridgeTronic"/>
-                </div>
-                    
+    
                 <div className={styles.socialContainer}>
                     <a href={instagramLink} target="_blank" rel="noopener noreferrer">
                         <FaInstagram className={styles.socialButton} />
