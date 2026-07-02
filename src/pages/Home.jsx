@@ -17,7 +17,7 @@ function Home() {
     <>
       <div className={`${styles.homePageContainer}`}>
         <div className={`${styles.homePageTextContent}`}>
-          <h1>UCI HACKER FAB</h1>
+          <h1>Irvine HACKER FAB</h1>
           <p>Join the future of semiconductor manufacturing and design!</p>
           <Link className={`${styles.learnMoreButton}`} to={"/HowtoContribute"}>
             Learn More

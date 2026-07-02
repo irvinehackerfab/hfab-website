@@ -16,7 +16,7 @@ function HowToContribute() {
             How can I join Hacker Fab?
           </p>
           <p className="BodyText">
-            Come to our general meetings! We usually have one every week on Fridays from 5-6:30 pm at ISEB 1310.  Also, join our discord for up-to-date information on our events!  Also, check out our subteams! They are a great way to gain experience in semiconductor manufacturing and meet new people
+           Look out for application announcements and general meeting updates in our Discord: 
           </p>
           <p className="BoldBodyText">
             How can support Hacker Fab?

@@ -2,11 +2,11 @@ import styles from "./Subteam.module.css";
 import Footer from "../Footer.jsx";
 import team_photo from "../assets/new_team_photo.jpg";
 
-import SpinCoaterIntro from "../assets/subteam_imgs/SpinCoaterIntro.jpg";
+import SpinCoaterIntro from "../assets/subteam_imgs/SpinCoaterIntronew.jpg";
 import TubeFurnaceIntro from "../assets/subteam_imgs/TubeFurnaceIntro.jpg";
 import SputteringIntro from "../assets/subteam_imgs/SputteringIntro.jpg";
-import ThermalEvapIntro from "../assets/subteam_imgs/ThermalEvapIntro.jpg";
-import LithoStepperIntro from "../assets/subteam_imgs/LithoStepperIntro.jpg";
+import ThermalEvapIntro from "../assets/subteam_imgs/ThermalEvapIntronew.jpg";
+import LithoStepperIntro from "../assets/subteam_imgs/LithoStepperIntronew.jpg";
 import { useRef } from "react";
 
 function Subteam() {
@@ -146,7 +146,7 @@ function Subteam() {
             What skills are we looking for?
           </p>
           <p className="BodyText">
-            CAD, Embedded Software, and Lab Testing.
+            CAD, PCB Design, Embedded Software, Lab Testing.
           </p>
         </div>
         <div className={`${styles.SubteamMediaContainer}`}>

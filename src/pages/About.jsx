@@ -16,7 +16,6 @@ function About() {
   const BoardMembers = [
     { name: 'Iurii', role: 'President', year: '2nd Year', image: logo },
     { name: 'Aurnob', role: 'VP', year: '3rd Year', image: aurnob },
-    { name: 'Lucas', role: 'Tube Furnace Lead', year: '', image: logo },
     { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
     { name: 'Joseph', role: 'Lithostepper Lead', year: '1st Year', image: joey },
     { name: 'Brycen', role: 'Resin Printer Lead', year: '2nd Year', image: brycen },
@@ -38,11 +37,11 @@ function About() {
           
           <p className="BoldBodyText">Who are we?</p>
           <p className="BodyText">
-            The Irvine Hacker Fab is an interdisciplinary team dedicated to creating open-source solutions for microchip fabrication. As part of a broader network that includes CMU, OSU, UW, and MIT, we aim to democratize semiconductor manufacturing by developing innovative, cost-effective tools and materials.
+           Irvine Hacker Fab is the West Coast's largest student-led semiconductor fabrication team, with over 50 members at UC Irvine. We operate a makeshift fab: a dry lab and a fume-hood wet lab, with no cleanroom. We are a chapter of the global Hacker Fab initiative, founded by Sam Zeloof at Carnegie Mellon. Our mission is to make hands-on semiconductor fabrication accessible without a cleanroom, training the next generation of fabrication engineers to help address the current U.S. shortage of trained semiconductor technicians and engineers.
           </p>
           <p className="BoldBodyText">What do we do?</p>
           <p className="BodyText">
-            Like TSMC and Intel, we develop both the hardware and software behind chipmaking — but with a student-driven, DIY twist. From designing spin coaters and lithography systems to writing control software, our subteams work on real-world engineering challenges across disciplines. There’s something here for every major.
+            We design, build, and validate our own fabrication tools in-house. Completed builds include a projector-based photolithography stepper capable of ~50 µm patterning, a 10,000 RPM spin coater, and ≤4×10⁻³ torr vacuum chamber setup for thermal evaporation. For the 2026–2027 season, our roadmap includes a thermal evaporation system, a characterization bench, and our first fabricated devices: a Schottky diode, with a thin-film transistor as the stretch goal. 
           </p>
         </div>
       </div>
