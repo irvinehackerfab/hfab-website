@@ -16,11 +16,11 @@ function About() {
   const BoardMembers = [
     { name: 'Iurii', role: 'President', year: '2nd Year', image: logo },
     { name: 'Aurnob', role: 'VP', year: '3rd Year', image: aurnob },
-    { name: 'Rassul', role: 'Thermal Evap Lead', year: '', image: logo },
-    { name: 'Joseph', role: 'Lithostepper Lead', year: '1st Year', image: joey },
+    { name: 'Rassul', role: 'Thermal Evap Lead', year: '3rd Year', image: logo },
+    { name: 'Joseph', role: 'Lithostepper Lead', year: '2nd Year', image: joey },
     { name: 'Brycen', role: 'Resin Printer Lead', year: '2nd Year', image: brycen },
     { name: 'Bella', role: 'Spin Coater Lead', year: '2nd Year', image: logo },
-    { name: 'Misaki', role: 'Social', year: '', image: misaki },
+    { name: 'Misaki', role: 'Social', year: '4th Year', image: misaki },
 
   ];
   return (
