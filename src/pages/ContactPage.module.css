@@ -1,74 +1,22 @@
 .ContactContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  width: 100%;            /* full width of parent */
-  max-width: 1200px;      /* optional max width for large screens */
-  padding: 20px;          /* inner spacing */
-  background-color: var(--primary-blue);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  background-color: var(--bg-elev);
+  border: 1px solid var(--line);
   border-radius: 10px;
   box-sizing: border-box;
-  margin: 20px auto;      /* top/bottom spacing, centered */
-}
-
-#contactTextContainer {
-  flex: 1 1 100%;           /* full width header/text */
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.emailContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  flex: 1 1 400px;          /* responsive width for form */
-  justify-content: center;
-}
-
-.emailContainer p,
-.emailContainer input,
-.emailContainer textarea {
-  flex: 1 1 100%;            /* inputs stack on small screens */
-  margin: 5px 0;
-  box-sizing: border-box;
-}
-
-#messageInput {
-  height: 150px;
-  resize: vertical;
-}
-
-.submitLink {
-  text-decoration: none;
-  color: black;
-  background-color: var(--primary-yellow);
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 10px;
-  font-size: 1em;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-#LinkImage {
-  flex: 1 1 300px;           /* image can shrink/grow */
-  max-width: 100%;
-  height: auto;
-  margin: 10px 0;
+  margin: 0 auto 4rem;
 }
 
 /* Mobile adjustments */
 @media screen and (max-width: 768px) {
   .ContactContainer {
-    flex-direction: column;
-    padding: 10px;        /* less padding on small screens */
-    margin: 10px;          /* less margin so it doesn’t cut off */
-  }
-
-  .emailContainer,
-  #LinkImage {
-    flex: 1 1 100%;       /* full width on mobile */
+    padding: 1.5rem;
+    margin: 0 1rem 3rem;
   }
 }

@@ -1,12 +1,28 @@
 .learnMoreButton {
-  background-color: var(--primary-yellow);
+  background-color: var(--gold);
   border: none;
   padding: 10px 20px;
   font-size: 1em;
+  font-family: var(--font-body);
   border-radius: 10px;
-  color: black;
+  color: var(--bg);
   text-decoration: none;
-  margin-left: 10%;
-  margin-top: 20px;
+  margin-top: 1rem;
   display: inline-block;
+  transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+}
+
+.learnMoreButton:hover {
+  background-color: var(--gold-soft);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .learnMoreButton {
+    transition: none;
+  }
+
+  .learnMoreButton:hover {
+    transform: none;
+  }
 }

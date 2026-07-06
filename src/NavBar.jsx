@@ -1,52 +1,61 @@
-// Navbar.jsx
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "./assets/hf_logo_text.png";
 import styles from "./NavBar.module.css";
-function NavBar() {
-  // state variable to keep track of what page we're on
-  // the li changes design based on if it's on the page
-  const location = useLocation();
-  // background color changes based on if we're on home page or not
-  // the home paege has a white background, other pages have blue
-  const headerStyle = {
-    backgroundColor: location.pathname !== "/" ? "var(--primary-blue)" : "white"};
-  const listStyle = (navBarItem) =>{
-    console.log(location.pathname);
-    console.log(navBarItem);
-    if (location.pathname === "/") {
-      return `${styles.navbarListItem}`;
-    }
-    else if (location.pathname === `/${navBarItem}`) {
-      return `${styles.navbarListItem}`;
-    }
-    else{
-      return `${styles.navbarListItemSelected}`;
-    }
-  };
-  return (
-    <header style={headerStyle}>
-      {/* Logo Image */}
-      
-      <div className = {`${styles.logoContainer}`}>
-        <img className={`${styles.navbarLogo}`} src={logo} alt="Irvine Hacker Fab"></img>
-        <h3 className={`${styles.tagline}`}>Zot! Zot! Zot!</h3>
-      </div>
-      <nav>
-        {/* list of navigation links */}
-        <ul className={`${styles.navBarList}`}>
-          {/*If the list item is selected, it will be white, if not selected, it will be blue*/}
-          {/*The exception is the home page, on the home page, the home page navitem will be blue, the others will be white*/}
-          <Link className={`${styles.navbarListItemSelected}`}to={"/"}>Home</Link>
-          <Link className={listStyle("About")}to={"/About"}>About</Link>
-          <Link className={listStyle("Subteams")}to={"/Subteams"}>Subteams</Link>
-          <Link className={listStyle("HowtoContribute")}to={"/HowtoContribute"}>How to Contribute</Link>
-          <Link className={listStyle("Resources")}to={"/Resources"}>Resources</Link>
-          <Link className={listStyle("ContactUs")}to={"/ContactUs"}>Contact Us</Link>
-          
 
-        </ul>
-      </nav>
+const LINKS = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/About" },
+  { label: "Subteams", to: "/Subteams" },
+  { label: "Contribute", to: "/HowtoContribute" },
+  { label: "Contact", to: "/ContactUs" },
+];
+
+function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.bar}>
+        <NavLink to="/" className={styles.logoContainer} onClick={() => setMenuOpen(false)}>
+          <img className={styles.navbarLogo} src={logo} alt="Irvine Hacker Fab" />
+        </NavLink>
+
+        <button
+          type="button"
+          className={styles.menuToggle}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className={styles.menuBar} />
+          <span className={styles.menuBar} />
+          <span className={styles.menuBar} />
+        </button>
+
+        <nav
+          id="primary-navigation"
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+        >
+          <ul className={styles.navBarList}>
+            {LINKS.map((link) => (
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  end={link.to === "/"}
+                  className={({ isActive }) =>
+                    `${styles.navbarListItem} ${isActive ? styles.navbarListItemActive : ""}`
+                  }
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

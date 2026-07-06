@@ -1,85 +1,133 @@
-/* Cards Section */
-.SubteamCardsContainer {
-  display: flex;
-  justify-content: center; /* center the row */
-  align-items: flex-start;
-  gap: 15px; /* small gap between cards */
-  padding: 20px 10px;
-  flex-wrap: wrap; /* allows wrapping on very small screens */
+.SubteamGridWrapper {
+  position: relative;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 
-/* Individual Card */
+.SubteamCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .SubteamCardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .SubteamCard {
-  width: 120px;        /* very small width */
-  height: 160px;       /* compact height */
-  background-color: var(--primary-blue);
-  color: white;
-  border-radius: 6px;
-  text-align: center;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow: hidden;
+  transition: border-color 0.2s var(--ease-out);
 }
 
 .SubteamCard:hover {
-  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+.SubteamCardPlaceholder {
+  visibility: hidden;
+}
+
+.SubteamOverlayRoot {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
+
+.SubteamBackdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.SubteamCardOverlay {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  min-height: 100%;
+  border-color: var(--gold);
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+.SubteamCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  font: inherit;
+  text-align: left;
+}
+
+.SubteamCardHeader:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .SubteamCardImage {
-  width: 100%;
-  height: 60px;        /* small image */
+  width: 108px;
+  height: 108px;
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 5px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  max-width: none;
+}
+
+.SubteamCardImageExpanded {
+  width: 100%;
+  max-width: 340px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .SubteamCardTitle {
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 3px;
+  flex: 1;
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text);
 }
 
-.SubteamCardDescription {
-  font-size: 0.65rem;
-  text-align: center;
-  line-height: 1.1;
+.SubteamCardChevron {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .SubteamCard {
-    width: 100px;
-    height: 140px;
-  }
-
-  .SubteamCardImage {
-    height: 50px;
-  }
-
-  .SubteamCardTitle {
-    font-size: 0.8rem;
-  }
-
-  .SubteamCardDescription {
-    font-size: 0.6rem;
-  }
+.SubteamCardBody {
+  margin-top: 1rem;
 }
 
-@media (max-width: 500px) {
+.SubteamFullTitle {
+  color: var(--gold);
+  font-family: var(--font-display);
+  margin: 0 0 0.75rem 0;
+}
+
+@media (max-width: 560px) {
   .SubteamCardsContainer {
-    justify-content: flex-start;
-    flex-wrap: wrap; /* cards will wrap to multiple lines */
-  }
-
-  .SubteamCard {
-    width: 45%;   /* two cards per row on mobile */
-    margin-bottom: 10px;
+    grid-template-columns: 1fr;
   }
 }
 
-.TableOfContents { display: flex; flex-direction: row; align-items: center; justify-content: left; width: 100%; margin: 0; padding-bottom: 0; background-color: var(--secondary-light-blue); } 
-.LinkBodyText { color: black; font-size: 1em; margin-bottom: 10px; text-decoration: underline; display: inline; } .LinkBodyText:hover { color: var(--primary-yellow); font-size: 1em; margin-bottom: 5px; text-decoration: underline; cursor: pointer; } /* Subteam Section Styles */ .SubteamContainer { display: flex; flex-direction: row-reverse; flex-wrap: wrap; width: 100%; box-sizing: border-box; align-items: center; justify-content: flex-start; padding: 2%; align-items: stretch; gap: 2%; background-color: var(--primary-blue); } .SubteamTextContainer { background-color: var(--secondary-light-blue); max-width: 20%; padding: 2%; width: 30%; margin-left: 8%; margin-right: 2%; box-sizing: border-box; border-radius: 10px; } .SubteamMediaContainer { width: 60%; border-radius: 8px; display: flex; padding: 0; align-items: center; justify-content: center; text-align: center; flex-direction: column; } .SubteamMediaRow { width: 100%; height: auto; box-sizing: border-box; display: flex; flex-direction: row; padding: 2%; gap: 2%; overflow: hidden; flex-wrap: no-wrap; } 
-.SubteamMediaContainer img { height: auto; object-fit: cover; display: block; margin: 0; max-width: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  .SubteamCard {
+    transition: none;
+  }
+}

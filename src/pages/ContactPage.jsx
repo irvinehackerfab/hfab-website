@@ -1,23 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./ContactPage.module.css";
-import contact_page_image from "../assets/contact_page_image.jpg";
-import Footer from "../Footer";
+import Reveal from "../components/Reveal";
+
+const discordLink = "https://discord.gg/p2byDUhDAz";
 
 function ContactPage() {
   return (
     <>
-      <div className="PageContainer" style={{ background: "var(--primary-blue)" }}>
-        <div className={styles.ContactContainer}>
-          <div className="TextContainer" id={styles.contactTextContainer}>
-            <h1 style={{ textAlign: "center" }}>Contact Us</h1>
-            <p>
-              Feel free to reach out to us via email at irvinehackerfab@gmail.com! 
-              Look out for application announcements and general meeting updates in our Discord.
-            </p>
-          </div>
-        </div>
+      <div className="PageContainer">
+        <Reveal as={motion.div} className="TextContainer">
+          <h1>Contact Us</h1>
+        </Reveal>
       </div>
-      <Footer />
+      <Reveal as={motion.div} className={styles.ContactContainer}>
+        <p>
+          Feel free to reach out to us via email at irvinehackerfab@gmail.com!
+          Look out for application announcements and general meeting updates in our{" "}
+          <a href={discordLink} target="_blank" rel="noopener noreferrer" className="EmphasisLink">
+            Discord
+          </a>
+          .
+        </p>
+      </Reveal>
     </>
   );
 }

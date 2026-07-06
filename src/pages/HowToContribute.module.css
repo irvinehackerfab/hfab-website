@@ -1,46 +1,22 @@
 .HowContainer {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
   width: 100%;
+  max-width: 1000px;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 2%;
-  align-items: stretch;
-  gap: 2%;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
 }
+
 .HowTextContainer {
-  background-color: var(--secondary-light-blue);
-  max-width: 40%;
-  padding: 2%;
-  width: 30%;
-  margin-left: 8%;
-  margin-right: 2%;
+  background-color: var(--bg-elev);
+  border: 1px solid var(--line);
+  flex: 1 1 460px;
+  max-width: 480px;
+  padding: 2rem;
   box-sizing: border-box;
   border-radius: 10px;
-}
-.HowMediaContainer {
-  background-color: var(--primary-blue);
-  width: 50%;
-  border-radius: 8px;
-  display: flex;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  flex-direction: column;
-}
-.HowMediaContainer img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  border: 2px solid black;
-
-}
-.HowMediaContainer img:hover {
-  filter: brightness(1.5)
 }

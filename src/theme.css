@@ -1,0 +1,158 @@
+/* theme.css — single source of truth for color, type, and shared tokens.
+   No component or module CSS should hardcode a color or font; reference
+   these custom properties instead. */
+
+:root {
+  /* Palette */
+  --bg: #0a0c10;
+  --bg-elev: #12161d;
+  --line: #24304a;
+  --blue: #3e78d6;
+  --blue-deep: #24457f;
+  --gold: #f5c518;
+  --gold-soft: #e9b949;
+  --text: #eaeef4;
+  --muted: #93a0b2;
+
+  /* Derived surface / state tokens (still built only from the palette above) */
+  --nav-bg: rgba(10, 12, 16, 0.72);
+  --overlay: rgba(10, 12, 16, 0.86);
+  --shadow: rgba(0, 0, 0, 0.45);
+  --focus-ring: var(--gold);
+
+  /* Type */
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-page: 0.3s;
+
+  /* Layout */
+  --content-max: 1120px;
+  --section-gap: 4.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--text);
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blue);
+}
+
+/* Shared layout utility classes (used as plain classNames across pages) */
+.PageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.TextContainer {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.TextContainer h1 {
+  color: var(--gold);
+}
+
+.TextContainer p {
+  color: var(--text);
+}
+
+.SectionContainer {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .PageContainer {
+    padding-top: 3.5rem;
+  }
+}
+
+.BodyText {
+  color: var(--text);
+  font-size: 1em;
+}
+
+.BoldBodyText {
+  color: var(--text);
+  font-size: 1.25em;
+  font-weight: bold;
+  font-family: var(--font-display);
+}
+
+.LinkBodyText {
+  color: var(--blue);
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  display: inline;
+}
+
+.LinkBodyText:hover {
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.EmphasisLink {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
