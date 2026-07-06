@@ -20,7 +20,7 @@ const BOARD_MEMBERS = [
   { name: 'Rassul', role: 'Thermal Evap Lead', year: '3rd Year', image: logo, isPlaceholder: true },
   { name: 'Joseph', role: 'Lithostepper Lead', year: '2nd Year', image: joey },
   { name: 'Bella', role: 'Spin Coater Lead', year: '2nd Year', image: logo, isPlaceholder: true },
-  { name: 'Misaki', role: 'Social', year: '4th Year', image: misaki },
+  { name: 'Misaki', role: 'Social Lead', year: '4th Year', image: misaki },
 ];
 
 const BUILT_TOOLS = [
@@ -123,7 +123,7 @@ function About() {
       {/* Board Member Content */}
       <div className={`${styles.BoardMembersContainer}`}>
         <div className="TextContainer">
-          <h1>Board Members</h1>
+          <h2 className={styles.SectionHeading}>Board Members</h2>
         </div>
         <Reveal
           as={motion.div}

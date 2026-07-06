@@ -22,6 +22,7 @@ function HowToContribute() {
             <a href={discordLink} target="_blank" rel="noopener noreferrer" className="EmphasisLink">
               Discord
             </a>
+            .
           </p>
         </div>
         <div className={styles.HowTextContainer}>
