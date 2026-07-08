@@ -1,133 +1,237 @@
-.SubteamGridWrapper {
-  position: relative;
-  max-width: var(--content-max);
+.TableWrapper {
+  width: 100%;
+  max-width: calc((var(--content-max) - 32px) * 0.75);
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
 
-.SubteamCardsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+.TableWrapper > * {
+  width: 100%;
 }
 
-@media (max-width: 900px) {
-  .SubteamCardsContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.SubteamCard {
+.Panel_Outer {
+  width: 100%;
   background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 1.5rem;
   overflow: hidden;
-  transition: border-color 0.2s var(--ease-out);
 }
 
-.SubteamCard:hover {
-  border-color: var(--blue);
-}
-
-.SubteamCardPlaceholder {
-  visibility: hidden;
-}
-
-.SubteamOverlayRoot {
-  position: absolute;
-  inset: 0;
-  z-index: 20;
-}
-
-.SubteamBackdrop {
-  position: absolute;
-  inset: 0;
-  background: var(--overlay);
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.SubteamCardOverlay {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  right: 5%;
-  min-height: 100%;
-  border-color: var(--gold);
-  box-shadow: 0 20px 60px var(--shadow);
-}
-
-.SubteamCardHeader {
+.HeaderBar {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 8px;
-  font: inherit;
-  text-align: left;
-}
-
-.SubteamCardHeader:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 4px;
-}
-
-.SubteamCardImage {
-  width: 108px;
-  height: 108px;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
-  max-width: none;
-}
-
-.SubteamCardImageExpanded {
-  width: 100%;
-  max-width: 340px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.SubteamCardTitle {
-  flex: 1;
-  margin: 0;
-  font-size: 1.4rem;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
   color: var(--text);
 }
 
-.SubteamCardChevron {
+.HeaderBracket {
+  color: var(--gold);
   font-family: var(--font-mono);
-  font-size: 1.75rem;
-  line-height: 1;
-  color: var(--gold);
+}
+
+.HeaderLabel {
+  color: var(--text);
+}
+
+.ColumnHeaderRow {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 5.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.ColumnSpacer {
+  width: 1px;
+}
+
+.ColumnHeaderStatus {
+  text-align: right;
+  padding-right: 0.25rem;
+}
+
+.RowsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.Row {
+  border-bottom: 1px solid var(--line);
+}
+
+.Row:last-child {
+  border-bottom: none;
+}
+
+.RowHeader {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 5.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.9rem 1.25rem;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: background-color 0.2s var(--ease-out);
+}
+
+.RowHeader:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.RowHeader:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.Chevron {
+  width: 0.85rem;
+  height: 0.85rem;
   flex-shrink: 0;
-}
-
-.SubteamCardBody {
-  margin-top: 1rem;
-}
-
-.SubteamFullTitle {
   color: var(--gold);
-  font-family: var(--font-display);
-  margin: 0 0 0.75rem 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.2s var(--ease-out);
 }
 
-@media (max-width: 560px) {
-  .SubteamCardsContainer {
-    grid-template-columns: 1fr;
+.ChevronOpen {
+  transform: rotate(90deg);
+}
+
+.CellName {
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.CellCategory {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.CellStatus {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.StatusPill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pill-color);
+  border: 1px solid var(--pill-color);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  white-space: nowrap;
+}
+
+.PanelWrapper {
+  overflow: hidden;
+}
+
+.Panel {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem 1rem 3rem;
+  align-items: flex-start;
+}
+
+.PanelDescription {
+  flex: 1;
+  color: var(--text);
+  font-family: var(--font-body);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.PanelImage {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.ImagePlaceholderLabel {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.Legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.LegendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.LegendSwatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pill-color);
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .ColumnHeaderRow,
+  .RowHeader {
+    grid-template-columns: 2rem minmax(0, 1fr) 5.5rem;
+  }
+
+  .ColumnHeaderCategory,
+  .CellCategory {
+    display: none;
+  }
+
+  .Panel {
+    flex-direction: column;
+    padding-left: 1.25rem;
+  }
+
+  .PanelImage {
+    width: 100%;
+    height: 180px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .SubteamCard {
+  .Chevron,
+  .RowHeader {
     transition: none;
   }
 }

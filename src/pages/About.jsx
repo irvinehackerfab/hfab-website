@@ -2,21 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import old_team_photo from "../assets/old_team_photo.jpg";
-import new_team_photo from "../assets/new_team_photo.jpg";
-import LithoStepperIntro from "../assets/subteam_imgs/LithoStepperIntronew.jpg";
-import SpinCoaterIntro from "../assets/subteam_imgs/SpinCoaterIntronew.jpg";
-import ThermalEvapIntro from "../assets/subteam_imgs/ThermalEvapIntronew.jpg";
+import old_team_photo from "../assets/irt_picture.jpg";
+import new_team_photo from "../assets/new_team_photo_2.png";
+import LithoStepperIntro from "../assets/subteam_imgs_2/lithography.png";
+import SpinCoaterIntro from "../assets/subteam_imgs_2/spincoater.png";
+import ThermalEvapIntro from "../assets/subteam_imgs_2/thermalevap.jpg";
 import logo from "../assets/hf_logo.png";
-import aurnob from "../assets/aurnob.jpg";
-import misaki from "../assets/misaki.jpg";
-import joey from "../assets/joey.jpg";
+import aurnob from "../boardmembers/aurnob.jpg";
+import misaki from "../boardmembers/misaki.jpg";
+import joey from "../boardmembers/joey.png";
+import iurii from "../boardmembers/iurii.jpg";
 import Reveal from "../components/Reveal";
 import { staggerContainer, staggerItem } from "../components/motionVariants";
 
 const BOARD_MEMBERS = [
-  { name: 'Iurii', role: 'President', year: '2nd Year', image: logo, isPlaceholder: true },
-  { name: 'Aurnob', role: 'VP', year: '3rd Year', image: aurnob },
+  { name: 'Iurii', role: 'President', year: '2nd Year', image: iurii },
+  { name: 'Aurnob', role: 'Chief of Engineering', year: '3rd Year', image: aurnob },
   { name: 'Rassul', role: 'Thermal Evap Lead', year: '3rd Year', image: logo, isPlaceholder: true },
   { name: 'Joseph', role: 'Lithostepper Lead', year: '2nd Year', image: joey },
   { name: 'Bella', role: 'Spin Coater Lead', year: '2nd Year', image: logo, isPlaceholder: true },
@@ -51,8 +52,21 @@ function About() {
         </Reveal>
       </div>
 
-      {/* Our Mission */}
+      {/* Who We Are */}
       <Reveal as={motion.div} className={styles.SplitSection}>
+        <div className={styles.SplitText}>
+          <h2 className={styles.SectionHeading}>Who We Are</h2>
+          <p className="BodyText">
+            We are the West Coast's largest student-led semiconductor fabrication team, with over 50 members at UC Irvine. We operate a makeshift fab, and we are a chapter of the global Hacker Fab initiative founded by Sam Zeloof at Carnegie Mellon, a network of 7+ university chapters building open-source fabrication capability worldwide.
+          </p>
+        </div>
+        <div className={styles.SplitImage}>
+          <img src={new_team_photo} alt="Irvine Hacker Fab team photo" />
+        </div>
+      </Reveal>
+
+      {/* Our Mission */}
+      <Reveal as={motion.div} className={`${styles.SplitSection} ${styles.SplitReverse}`}>
         <div className={styles.SplitText}>
           <h2 className={styles.SectionHeading}>Our Mission</h2>
           <p className="BodyText">
@@ -64,19 +78,6 @@ function About() {
         </div>
         <div className={styles.SplitImage}>
           <img src={old_team_photo} alt="Irvine Hacker Fab members at a general meeting" />
-        </div>
-      </Reveal>
-
-      {/* Who We Are */}
-      <Reveal as={motion.div} className={`${styles.SplitSection} ${styles.SplitReverse}`}>
-        <div className={styles.SplitText}>
-          <h2 className={styles.SectionHeading}>Who We Are</h2>
-          <p className="BodyText">
-            We are the West Coast's largest student-led semiconductor fabrication team, with over 50 members at UC Irvine. We operate a makeshift fab, and we are a chapter of the global Hacker Fab initiative founded by Sam Zeloof at Carnegie Mellon, a network of 7+ university chapters building open-source fabrication capability worldwide.
-          </p>
-        </div>
-        <div className={styles.SplitImage}>
-          <img src={new_team_photo} alt="Irvine Hacker Fab team photo" />
         </div>
       </Reveal>
 

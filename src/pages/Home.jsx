@@ -19,9 +19,14 @@ const METRICS = [
     description: "West Coast's largest student-led fab team",
   },
   {
-    number: "7+",
+    number: "9",
     label: "chapters",
     description: "in the global Hacker Fab network",
+  },
+  {
+    number: "Calit2",
+    label: "backing",
+    description: "for funding and dry-lab access",
   },
 ];
 
