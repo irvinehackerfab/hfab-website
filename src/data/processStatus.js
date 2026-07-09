@@ -32,7 +32,7 @@ export const PROCESSES = [
     image: SpinCoaterIntro,
     imageAlt: "Spin coater",
     description:
-      "A spin coater creates thin, uniform films on flat surfaces by placing a small amount of liquid on a substrate and spinning it at high speed. Centrifugal force spreads the liquid evenly while removing the excess, with coating thickness determined by spin speed and viscosity. It is a key tool for precise film deposition in electronics and optics research.",
+      "A spin coater creates thin, uniform films on flat surfaces by placing a small amount of liquid on a substrate and spinning it at high speed. Our setup uses a 3D printed structure, a hot-swap holder, a touchscreen display, and a vacuum chuck that can spin 1 to 4 in. wafers up to 10,000±10% RPM."
   },
   {
     id: "process-integration",
