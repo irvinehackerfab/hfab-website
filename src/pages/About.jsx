@@ -12,7 +12,7 @@ import aurnob from "../boardmembers/aurnob.jpg";
 import misaki from "../boardmembers/misaki.jpg";
 import joey from "../boardmembers/joey.png";
 import iurii from "../boardmembers/iurii.jpg";
-import isabel from "../boardmembers/iurii.jpg";
+import isabel from "../boardmembers/isabel.jpg";
 import Reveal from "../components/Reveal";
 import { staggerContainer, staggerItem } from "../components/motionVariants";
 
