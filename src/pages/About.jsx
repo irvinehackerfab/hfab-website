@@ -12,6 +12,7 @@ import aurnob from "../boardmembers/aurnob.jpg";
 import misaki from "../boardmembers/misaki.jpg";
 import joey from "../boardmembers/joey.png";
 import iurii from "../boardmembers/iurii.jpg";
+import isabel from "../boardmembers/iurii.jpg";
 import Reveal from "../components/Reveal";
 import { staggerContainer, staggerItem } from "../components/motionVariants";
 
@@ -20,7 +21,7 @@ const BOARD_MEMBERS = [
   { name: 'Aurnob', role: 'Chief of Engineering', year: '3rd Year', image: aurnob },
   { name: 'Rassul', role: 'Thermal Evap Lead', year: '3rd Year', image: logo, isPlaceholder: true },
   { name: 'Joseph', role: 'Lithostepper Lead', year: '2nd Year', image: joey },
-  { name: 'Bella', role: 'Spin Coater Lead', year: '2nd Year', image: logo, isPlaceholder: true },
+  { name: 'Isabel', role: 'Spin Coater Lead + Webmaster', year: '2nd Year', image: isabel },
   { name: 'Misaki', role: 'Social Lead', year: '4th Year', image: misaki },
 ];
 
