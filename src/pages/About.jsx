@@ -21,7 +21,7 @@ const BOARD_MEMBERS = [
   { name: 'Aurnob', role: 'Chief of Engineering', year: '3rd Year', image: aurnob },
   { name: 'Rassul', role: 'Thermal Evap Lead', year: '3rd Year', image: logo, isPlaceholder: true },
   { name: 'Joseph', role: 'Lithostepper Lead', year: '2nd Year', image: joey },
-  { name: 'Isabel', role: 'Spin Coater Lead + Webmaster', year: '2nd Year', image: isabel },
+  { name: 'Isabel', role: 'Spin Coater Lead, Webmaster', year: '2nd Year', image: isabel },
   { name: 'Misaki', role: 'Social Lead', year: '4th Year', image: misaki },
 ];
 
