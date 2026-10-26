@@ -1,8 +1,8 @@
 .TableWrapper {
   width: 100%;
-  max-width: calc((var(--content-max) - 32px) * 0.75);
+  max-width: 920px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 1rem var(--gutter) 0;
 }
 
 .TableWrapper > * {
@@ -11,24 +11,37 @@
 
 .Panel_Outer {
   width: 100%;
-  background: var(--bg-elev);
+  background: var(--card-grad);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
   overflow: hidden;
 }
 
 .HeaderBar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.25rem;
+  padding: 1.1rem 1.5rem;
   border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(62, 120, 214, 0.1), transparent);
   font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   font-size: 0.85rem;
   color: var(--text);
+}
+
+.HeaderBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--blue));
 }
 
 .HeaderBracket {
@@ -42,15 +55,15 @@
 
 .ColumnHeaderRow {
   display: grid;
-  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 5.5rem;
+  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 6.5rem;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.6rem 1.25rem;
+  padding: 0.7rem 1.5rem;
   border-bottom: 1px solid var(--line);
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--muted);
 }
 
@@ -69,22 +82,45 @@
 }
 
 .Row {
-  border-bottom: 1px solid var(--line);
+  position: relative;
+  border-bottom: 1px solid var(--line-soft);
 }
 
 .Row:last-child {
   border-bottom: none;
 }
 
+/* Gold accent bar on hover / open */
+.Row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gold);
+  transform: scaleY(0);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.Row:hover::before,
+.Row:has([aria-expanded="true"])::before {
+  transform: scaleY(1);
+}
+
+.Row:has([aria-expanded="true"]) {
+  background: rgba(62, 120, 214, 0.06);
+}
+
 .RowHeader {
   display: grid;
-  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 5.5rem;
+  grid-template-columns: 2.25rem minmax(0, 1fr) minmax(0, 1fr) 6.5rem;
   align-items: center;
   gap: 0.75rem;
   width: 100%;
   background: none;
   border: none;
-  padding: 0.9rem 1.25rem;
+  padding: 1.15rem 1.5rem;
   cursor: pointer;
   font: inherit;
   text-align: left;
@@ -98,34 +134,44 @@
 .RowHeader:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: -2px;
+  border-radius: 0;
 }
 
 .Chevron {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.4rem;
   flex-shrink: 0;
   color: var(--gold);
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.2s var(--ease-out);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: transform 0.25s var(--ease-out), border-color 0.2s var(--ease-out),
+    background-color 0.2s var(--ease-out);
+}
+
+.RowHeader:hover .Chevron {
+  border-color: rgba(245, 197, 24, 0.5);
 }
 
 .ChevronOpen {
   transform: rotate(90deg);
+  background: var(--gold-tint);
+  border-color: rgba(245, 197, 24, 0.5);
 }
 
 .CellName {
-  font-family: var(--font-body);
+  font-family: var(--font-display);
+  font-weight: 600;
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.08rem;
 }
 
 .CellCategory {
   font-family: var(--font-mono);
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
 .CellStatus {
@@ -134,15 +180,28 @@
 }
 
 .StatusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: var(--font-mono);
   font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--pill-color);
-  border: 1px solid var(--pill-color);
+  background: color-mix(in srgb, var(--pill-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--pill-color) 45%, transparent);
   border-radius: 999px;
-  padding: 0.2rem 0.65rem;
+  padding: 0.3rem 0.7rem;
   white-space: nowrap;
+}
+
+.StatusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pill-color);
+  box-shadow: 0 0 8px var(--pill-color);
 }
 
 .PanelWrapper {
@@ -151,26 +210,31 @@
 
 .Panel {
   display: flex;
-  gap: 1.5rem;
-  padding: 1rem 1.25rem 1rem 3rem;
+  gap: 1.75rem;
+  padding: 0.25rem 1.5rem 1.75rem 4.5rem;
   align-items: flex-start;
 }
 
 .PanelDescription {
   flex: 1;
-  color: var(--text);
+  color: var(--muted);
   font-family: var(--font-body);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .PanelImage {
-  width: 220px;
-  height: 160px;
+  display: grid;
+  place-items: center;
+  width: 260px;
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius);
   flex-shrink: 0;
   border: 1px solid var(--line);
+  background: var(--bg);
+  box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.9);
 }
 
 .ImagePlaceholderLabel {
@@ -183,20 +247,21 @@
 .Legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  margin-top: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
   padding: 0 0.25rem;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
 .LegendItem {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .LegendSwatch {
@@ -204,13 +269,16 @@
   height: 8px;
   border-radius: 50%;
   background: var(--pill-color);
+  box-shadow: 0 0 8px var(--pill-color);
   display: inline-block;
 }
 
 @media (max-width: 640px) {
   .ColumnHeaderRow,
   .RowHeader {
-    grid-template-columns: 2rem minmax(0, 1fr) 5.5rem;
+    grid-template-columns: 1.75rem minmax(0, 1fr) 6rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
   }
 
   .ColumnHeaderCategory,
@@ -220,18 +288,18 @@
 
   .Panel {
     flex-direction: column;
-    padding-left: 1.25rem;
+    padding: 0.25rem 1.1rem 1.5rem;
   }
 
   .PanelImage {
     width: 100%;
-    height: 180px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .Chevron,
-  .RowHeader {
+  .RowHeader,
+  .Row::before {
     transition: none;
   }
 }

@@ -1,0 +1,62 @@
+.PageHeader {
+  position: relative;
+  width: 100%;
+  padding: 6rem var(--gutter) 3rem;
+  text-align: center;
+}
+
+/* Soft spotlight behind the title. Not clipped by the header, so the glow
+   fades out on its own instead of ending in a hard edge. */
+.PageHeader::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  width: min(1000px, 100%);
+  height: 640px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(62, 120, 214, 0.22), rgba(62, 120, 214, 0.08) 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.Inner {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Title {
+  margin: 0;
+  color: var(--text);
+}
+
+/* Gold underline accent, like an exposed litho line */
+.Title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 1.25rem auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--blue));
+}
+
+.Lead {
+  margin-top: 1.5rem;
+}
+
+.Lead p {
+  font-size: var(--fs-lead);
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .PageHeader {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+}

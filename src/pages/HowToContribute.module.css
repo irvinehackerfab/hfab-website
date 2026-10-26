@@ -1,22 +1,77 @@
 .HowContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   width: 100%;
   max-width: 1000px;
-  box-sizing: border-box;
-  margin: 0 auto 4rem;
-  padding: 0 1.5rem;
+  margin: 0 auto;
+  padding: 1rem var(--gutter) 0;
 }
 
 .HowTextContainer {
-  background-color: var(--bg-elev);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--card-grad);
   border: 1px solid var(--line);
-  flex: 1 1 460px;
-  max-width: 480px;
-  padding: 2rem;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 2.25rem 2rem 2rem;
+  overflow: hidden;
+}
+
+.HowTextContainer :global(.BoldBodyText) {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.HowTextContainer :global(.BodyText) {
+  margin: 0 0 1.75rem;
+}
+
+/* Donation card gets a gold edge and warm glow */
+.Featured {
+  border-color: rgba(245, 197, 24, 0.35);
+  background:
+    radial-gradient(500px 220px at 100% 0%, rgba(245, 197, 24, 0.1), transparent 70%),
+    var(--card-grad);
+}
+
+.Featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+}
+
+.IconBadge {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.25rem;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  color: var(--gold);
+  background: var(--gold-tint);
+  border: 1px solid rgba(245, 197, 24, 0.3);
+}
+
+.CardAction {
+  margin-top: auto;
+}
+
+@media (max-width: 760px) {
+  .HowContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .HowTextContainer {
+    padding: 1.75rem 1.5rem;
+  }
 }

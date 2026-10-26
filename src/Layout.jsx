@@ -14,13 +14,11 @@ const MotionMain = motion.main;
 
 function Layout() {
   const location = useLocation();
-  const isHome = location.pathname === "/";
-
   return (
     <MotionConfig reducedMotion="user">
       <div className={styles.appShell}>
         <NavBar />
-        {!isHome && <MaskTexture />}
+        <MaskTexture />
         <MotionMain
           className={styles.main}
           key={location.pathname}

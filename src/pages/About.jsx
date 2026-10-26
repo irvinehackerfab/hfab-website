@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
 import styles from "./About.module.css";
 import old_team_photo from "../assets/irt_picture.jpg";
 import new_team_photo from "../assets/new_team_photo_2.png";
@@ -13,6 +14,7 @@ import misaki from "../boardmembers/misaki.jpg";
 import joey from "../boardmembers/joey.png";
 import iurii from "../boardmembers/iurii.jpg";
 import Reveal from "../components/Reveal";
+import PageHeader from "../components/PageHeader";
 import { staggerContainer, staggerItem } from "../components/motionVariants";
 
 const BOARD_MEMBERS = [
@@ -42,34 +44,41 @@ const BUILT_TOOLS = [
   },
 ];
 
+// Milestones from the "Where We're Going" roadmap, in order.
+const ROADMAP = [
+  { title: "Test structures", note: "Validated" },
+  { title: "Schottky diode", note: "Our first fabricated device" },
+  { title: "RF rectenna" },
+  { title: "ZnO thin-film transistor", note: "Trophy goal", goal: true },
+];
+
 function About() {
   return (
     <>
-      {/* Page Title */}
-      <div className="PageContainer">
-        <Reveal as={motion.div} className="TextContainer">
-          <h1>About us</h1>
-        </Reveal>
-      </div>
+      <PageHeader eyebrow="About" title="About us" />
 
       {/* Who We Are */}
-      <Reveal as={motion.div} className={styles.SplitSection}>
+      <Reveal as={motion.section} className={`${styles.SplitSection} ${styles.SplitTop}`}>
         <div className={styles.SplitText}>
+          <span className="Eyebrow">01 · Who We Are</span>
           <h2 className={styles.SectionHeading}>Who We Are</h2>
-          <p className="BodyText">
-            We are the West Coast's largest student-led semiconductor fabrication team, with over 50 members at UC Irvine. We operate a makeshift fab, and we are a chapter of the global Hacker Fab initiative founded by Sam Zeloof at Carnegie Mellon, a network of 7+ university chapters building open-source fabrication capability worldwide.
+          <p className={`BodyText ${styles.Lead}`}>
+            We are the West Coast's largest student-led semiconductor fabrication team, with a community of over 300 members and 40+ researchers and interns at UC Irvine. We operate a makeshift fab, and we are a chapter of the global Hacker Fab initiative founded by Sam Zeloof at Carnegie Mellon, a network of 7+ university chapters building open-source fabrication capability worldwide.
           </p>
         </div>
-        <div className={styles.SplitImage}>
-          <img src={new_team_photo} alt="Irvine Hacker Fab team photo" />
+        <div className={`${styles.SplitImage} ${styles.SplitImageWide}`}>
+          <div className={styles.Frame}>
+            <img src={new_team_photo} alt="Irvine Hacker Fab team photo" />
+          </div>
         </div>
       </Reveal>
 
       {/* Our Mission */}
-      <Reveal as={motion.div} className={`${styles.SplitSection} ${styles.SplitReverse}`}>
+      <Reveal as={motion.section} className={`${styles.SplitSection} ${styles.SplitReverse}`}>
         <div className={styles.SplitText}>
+          <span className="Eyebrow">02 · Our Mission</span>
           <h2 className={styles.SectionHeading}>Our Mission</h2>
-          <p className="BodyText">
+          <p className="BodyText MutedText">
             The United States faces a shortage of tens of thousands of trained semiconductor engineers and technicians by the end of the decade, yet most students never touch a fabrication process before graduate school, because cleanroom access is scarce, expensive, and gated.
           </p>
           <p className="BodyText">
@@ -77,15 +86,18 @@ function About() {
           </p>
         </div>
         <div className={styles.SplitImage}>
-          <img src={old_team_photo} alt="Irvine Hacker Fab members at a general meeting" />
+          <div className={styles.Frame}>
+            <img src={old_team_photo} alt="Irvine Hacker Fab members at a general meeting" />
+          </div>
         </div>
       </Reveal>
 
       {/* What We've Built */}
-      <div className={styles.BuiltSection}>
+      <section className={styles.BuiltSection}>
         <Reveal as={motion.div} className={styles.BuiltHeader}>
+          <span className="Eyebrow">03 · Tools</span>
           <h2 className={styles.SectionHeading}>What We've Built</h2>
-          <p className="BodyText">Our tool set includes:</p>
+          <p className="BodyText MutedText">Our tool set includes:</p>
         </Reveal>
 
         <Reveal
@@ -96,34 +108,51 @@ function About() {
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
         >
-          {BUILT_TOOLS.map((tool) => (
-            <motion.div key={tool.title} className={styles.BuiltTile} variants={staggerItem}>
-              <h3 className={styles.BuiltTileTitle}>{tool.title}</h3>
-              <p className="BodyText">{tool.description}</p>
-              <img src={tool.image} alt={tool.title} className={styles.BuiltTileImage} />
-            </motion.div>
+          {BUILT_TOOLS.map((tool, index) => (
+            <motion.article key={tool.title} className={styles.BuiltTile} variants={staggerItem}>
+              <div className={styles.BuiltTileMedia}>
+                <img src={tool.image} alt={tool.title} className={styles.BuiltTileImage} />
+                <span className={styles.BuiltTileIndex}>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div className={styles.BuiltTileBody}>
+                <h3 className={styles.BuiltTileTitle}>{tool.title}</h3>
+                <p className={styles.BuiltTileText}>{tool.description}</p>
+              </div>
+            </motion.article>
           ))}
         </Reveal>
 
-        <Reveal as={motion.p} className={`BoldBodyText ${styles.BuiltFooter}`}>
+        <Reveal as={motion.p} className={styles.BuiltFooter}>
           We have already spin-coated and patterned a full wafer as proof of concept. Every design is contributed back to the global Hacker Fab open-source library.
         </Reveal>
-      </div>
+      </section>
 
       {/* Where We're Going */}
-      <Reveal as={motion.div} className={styles.FutureSection}>
+      <Reveal as={motion.section} className={styles.FutureSection}>
+        <span className="Eyebrow">04 · Roadmap</span>
         <h2 className={styles.SectionHeading}>Where We're Going</h2>
-        <p className="BodyText">
+        <p className="BodyText MutedText">
           This year, we cross from tools to devices. Our de-risked, three-quarter roadmap moves from validated test structures to a working Schottky diode, our first fabricated device, then to an RF rectenna, and finally to our trophy goal: a ZnO thin-film transistor, fabricated end-to-end on student-built equipment. Each milestone is measurable, dated, and documented in the open.
         </p>
-        <Link to="/HowtoContribute" className={styles.SupportButton}>
-          Learn How You Can Help
+        <ol className={styles.Roadmap}>
+          {ROADMAP.map((step, index) => (
+            <li key={step.title} className={`${styles.RoadmapStep} ${step.goal ? styles.RoadmapGoal : ""}`}>
+              <span className={styles.RoadmapDot} aria-hidden="true" />
+              <span className={styles.RoadmapIndex}>Step {index + 1}</span>
+              <span className={styles.RoadmapTitle}>{step.title}</span>
+              {step.note && <span className={styles.RoadmapNote}>{step.note}</span>}
+            </li>
+          ))}
+        </ol>
+        <Link to="/HowtoContribute" className="Btn BtnPrimary">
+          Learn How You Can Help <FiArrowRight aria-hidden="true" />
         </Link>
       </Reveal>
 
       {/* Board Member Content */}
-      <div className={`${styles.BoardMembersContainer}`}>
-        <div className="TextContainer">
+      <section className={styles.BoardMembersContainer}>
+        <div className={styles.BoardHeader}>
+          <span className="Eyebrow">05 · Leadership</span>
           <h2 className={styles.SectionHeading}>Board Members</h2>
         </div>
         <Reveal
@@ -136,18 +165,20 @@ function About() {
         >
           {BOARD_MEMBERS.map((member, index) => (
             <motion.div key={index} className={styles.boardCard} variants={staggerItem}>
-              <img
-                src={member.image}
-                alt={member.name}
-                className={member.isPlaceholder ? styles.BoardImagePlaceholder : styles.BoardImage}
-              />
-              <h3 className = {`${styles.member}`}>{member.name}</h3>
-              <p className = {`${styles.year}`}>{member.year}</p>
-              <p className = {`${styles.role}`}>{member.role}</p>
+              <div className={styles.BoardImageWrap}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className={member.isPlaceholder ? styles.BoardImagePlaceholder : styles.BoardImage}
+                />
+              </div>
+              <h3 className={styles.member}>{member.name}</h3>
+              <p className={styles.role}>{member.role}</p>
+              <p className={styles.year}>{member.year}</p>
             </motion.div>
           ))}
         </Reveal>
-      </div>
+      </section>
     </>
   );
 }

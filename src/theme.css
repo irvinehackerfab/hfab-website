@@ -5,9 +5,12 @@
 :root {
   /* Palette */
   --bg: #0a0c10;
-  --bg-elev: #12161d;
+  --bg-elev: #11151c;
+  --bg-elev-2: #171c26;
   --line: #24304a;
+  --line-soft: rgba(124, 155, 214, 0.14);
   --blue: #3e78d6;
+  --blue-bright: #6c9cf0;
   --blue-deep: #24457f;
   --gold: #f5c518;
   --gold-soft: #e9b949;
@@ -15,23 +18,38 @@
   --muted: #93a0b2;
 
   /* Derived surface / state tokens (still built only from the palette above) */
-  --nav-bg: rgba(10, 12, 16, 0.72);
+  --nav-bg: rgba(10, 12, 16, 0.78);
   --overlay: rgba(10, 12, 16, 0.86);
   --shadow: rgba(0, 0, 0, 0.45);
   --focus-ring: var(--gold);
+  --gold-tint: rgba(245, 197, 24, 0.1);
+  --blue-tint: rgba(62, 120, 214, 0.12);
+  --card-grad: linear-gradient(180deg, rgba(23, 28, 38, 0.92) 0%, rgba(17, 21, 28, 0.92) 100%);
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -24px var(--shadow);
+  --shadow-lift: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 28px 60px -28px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(62, 120, 214, 0.35);
 
   /* Type */
   --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --fs-h1: clamp(2.5rem, 5vw + 1rem, 4.25rem);
+  --fs-h2: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  --fs-lead: clamp(1.05rem, 0.4vw + 0.95rem, 1.2rem);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-page: 0.3s;
 
   /* Layout */
-  --content-max: 1120px;
-  --section-gap: 4.5rem;
+  --content-max: 1160px;
+  --section-gap: 5.5rem;
+  --gutter: 1.5rem;
 }
 
 html {
@@ -45,14 +63,22 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+
 img {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -63,10 +89,12 @@ h4 {
   font-family: var(--font-display);
   color: var(--text);
   margin: 0 0 0.5em 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--fs-h1);
   color: var(--gold);
   margin-bottom: 20px;
 }
@@ -75,11 +103,17 @@ p {
   color: var(--text);
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 a {
-  color: var(--blue);
+  color: var(--blue-bright);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Shared layout utility classes (used as plain classNames across pages) */
@@ -90,7 +124,7 @@ a {
   width: 100%;
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 5rem 1.5rem 1rem;
+  padding: 5rem var(--gutter) 1rem;
   text-align: center;
 }
 
@@ -112,7 +146,7 @@ a {
   width: 100%;
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--gutter);
 }
 
 @media (max-width: 600px) {
@@ -126,15 +160,20 @@ a {
   font-size: 1em;
 }
 
+.MutedText {
+  color: var(--muted);
+}
+
 .BoldBodyText {
   color: var(--text);
   font-size: 1.25em;
-  font-weight: bold;
+  font-weight: 600;
   font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
 
 .LinkBodyText {
-  color: var(--blue);
+  color: var(--blue-bright);
   font-size: 1em;
   margin-bottom: 10px;
   text-decoration: underline;
@@ -147,13 +186,119 @@ a {
 }
 
 .EmphasisLink {
-  color: inherit;
-  font-weight: 700;
+  color: var(--gold);
+  font-weight: 600;
   text-decoration: underline;
+  text-decoration-color: rgba(245, 197, 24, 0.45);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s var(--ease-out);
+}
+
+.EmphasisLink:hover {
+  text-decoration-color: var(--gold);
+}
+
+/* Eyebrow — small mono label above headings */
+.Eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.Eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(245, 197, 24, 0.6);
+}
+
+/* Buttons */
+.Btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out),
+    border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), color 0.2s var(--ease-out);
+}
+
+.Btn svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.Btn:hover {
+  transform: translateY(-2px);
+}
+
+.Btn:hover svg {
+  transform: translateX(3px);
+}
+
+.BtnPrimary {
+  background: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 10px 30px -12px rgba(245, 197, 24, 0.65);
+}
+
+.BtnPrimary:hover {
+  background: var(--gold-soft);
+  box-shadow: 0 16px 36px -12px rgba(245, 197, 24, 0.75);
+}
+
+.BtnGhost {
+  background: rgba(17, 21, 28, 0.6);
+  color: var(--text);
+  border-color: var(--line);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.BtnGhost:hover {
+  border-color: var(--blue);
+  background: var(--blue-tint);
+}
+
+/* Card surface */
+.Card {
+  background: var(--card-grad);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .Btn,
+  .Btn svg {
+    transition: none;
+  }
+
+  .Btn:hover,
+  .Btn:hover svg {
+    transform: none;
   }
 }

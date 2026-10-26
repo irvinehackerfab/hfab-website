@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import styles from "./Subteam.module.css";
 import Reveal from "../components/Reveal";
+import PageHeader from "../components/PageHeader";
 import { PROCESSES, STATUS } from "../data/processStatus";
 
 function StatusPill({ status }) {
@@ -9,6 +10,7 @@ function StatusPill({ status }) {
   if (!def) return null;
   return (
     <span className={styles.StatusPill} style={{ "--pill-color": def.color }}>
+      <span className={styles.StatusDot} aria-hidden="true" />
       {def.label}
     </span>
   );
@@ -109,14 +111,11 @@ function Subteam() {
   return (
     <>
       {/* Intro Section */}
-      <div className="PageContainer">
-        <Reveal as={motion.div} className="TextContainer">
-          <h1>Subteams</h1>
-          <p className="BodyText">
-            Our club is constantly developing exciting projects across multiple teams. We offer hands-on engineering project experience, giving members the opportunity to tackle open-ended problems and contribute to open-source technologies that make a global impact. With our welcoming and collaborative philosophy, we’ll help you find the subteam that’s the perfect fit for you!
-          </p>
-        </Reveal>
-      </div>
+      <PageHeader eyebrow="Our Teams" title="Subteams">
+        <p>
+          Our club is constantly developing exciting projects across multiple teams. We offer hands-on engineering project experience, giving members the opportunity to tackle open-ended problems and contribute to open-source technologies that make a global impact. With our welcoming and collaborative philosophy, we’ll help you find the subteam that’s the perfect fit for you!
+        </p>
+      </PageHeader>
 
       {/* Process Status Table */}
       <div className={styles.TableWrapper} onKeyDown={handleKeyDown}>

@@ -1,18 +1,19 @@
 import React from 'react';
-import styles from "./ErrorPage.module.css";
 import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+import PageHeader from "../components/PageHeader";
+import styles from "./ErrorPage.module.css";
 
 function ErrorPage() {
     return (
-        <div className='PageContainer'>
-            <div className='TextContainer'>
-                <h1>404 - Page Not Found</h1>
-                <p className='BodyText'>The page you are looking for does not exist.</p>
-                <Link className={`${styles.learnMoreButton}`} to={"/"}>
-                    Learn More
+        <PageHeader eyebrow="Error 404" title="404 - Page Not Found">
+            <p>The page you are looking for does not exist.</p>
+            <div className={styles.Actions}>
+                <Link className="Btn BtnPrimary" to={"/"}>
+                    Learn More <FiArrowRight aria-hidden="true" />
                 </Link>
             </div>
-        </div>
+        </PageHeader>
     );
 }
 

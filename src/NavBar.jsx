@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "./assets/hf_logo_text.png";
 import styles from "./NavBar.module.css";
@@ -13,9 +13,17 @@ const LINKS = [
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled || menuOpen ? styles.headerScrolled : ""}`}>
       <div className={styles.bar}>
         <NavLink to="/" className={styles.logoContainer} onClick={() => setMenuOpen(false)}>
           <img className={styles.navbarLogo} src={logo} alt="Irvine Hacker Fab" />
@@ -23,7 +31,7 @@ function NavBar() {
 
         <button
           type="button"
-          className={styles.menuToggle}
+          className={`${styles.menuToggle} ${menuOpen ? styles.menuToggleOpen : ""}`}
           aria-expanded={menuOpen}
           aria-controls="primary-navigation"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
